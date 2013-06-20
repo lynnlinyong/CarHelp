@@ -1,0 +1,19 @@
+//
+// Prefix header for all source files of the 'CarHelp' target in the 'CarHelp' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+
+    #import "CLog.h"
+    #import "UIView+UIAdaptation.h"
+    #import "UIScreen+UIWindowSize.h"
+    #import "UIViewController+SearchViewController.h"
+#endif
