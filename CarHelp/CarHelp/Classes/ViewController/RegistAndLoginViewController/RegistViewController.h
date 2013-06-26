@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RegistViewController : UIViewController
+@interface RegistViewController : UIViewController<UITextFieldDelegate>
+{
+}
+
+@property (nonatomic, retain) UITextField *userNameFld;
+@property (nonatomic, retain) UITextField *pwdFld;
+@property (nonatomic, retain) UITextField *rePwdFld;
 
 @end

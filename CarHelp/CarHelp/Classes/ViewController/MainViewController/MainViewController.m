@@ -28,10 +28,7 @@
     [super viewDidLoad];
     self.title = @"首页";
     
-    UIBarButtonItem *leftBItem = [[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks
-                                                                              target:self
-                                                                              action:@selector(doMenuClicked:)]autorelease];
-    self.navigationItem.leftBarButtonItem = leftBItem;
+    [self initUI];
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,9 +44,7 @@
 
 #pragma mark -
 #pragma mark Custom Action
-- (void) doMenuClicked:(id)sender
+- (void) initUI
 {
-    DDMenuController *mvc = (DDMenuController *)[self searchViewController:NSStringFromClass([DDMenuController class])];
-    [mvc showLeftController:YES];
 }
 @end

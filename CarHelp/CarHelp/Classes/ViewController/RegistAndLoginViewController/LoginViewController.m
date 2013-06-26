@@ -131,7 +131,8 @@
 - (void) doRegistBtnClicked:(id)sender
 {
     RegistViewController *rvc = [[RegistViewController alloc]init];
-    [self.navigationController pushViewController:rvc animated:YES];
+    [self.navigationController pushViewController:rvc
+                                         animated:YES];
     [rvc release];
 }
 

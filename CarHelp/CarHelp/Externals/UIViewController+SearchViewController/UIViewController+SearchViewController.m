@@ -14,10 +14,9 @@
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     UINavigationController *navctr = (UINavigationController *)appDelegate.window.rootViewController;
     NSArray *ctrArray = navctr.viewControllers;
-
     for (UIViewController *vc in ctrArray)
     {
-        if ([vc isKindOfClass: NSClassFromString(viewCtrName)])
+        if ([NSStringFromClass([vc class]) isEqualToString:viewCtrName])
         {
             return vc;
         }

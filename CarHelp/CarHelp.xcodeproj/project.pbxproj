@@ -7,38 +7,139 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA04D347177489060006FEDA /* ChatListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA04D345177489060006FEDA /* ChatListViewController.m */; };
+		BA04D3501774997C0006FEDA /* nav_menu_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA04D34F1774997C0006FEDA /* nav_menu_icon@2x.png */; };
+		BA04D353177499E60006FEDA /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA04D352177499E60006FEDA /* FriendsViewController.m */; };
+		BA04D35717749B230006FEDA /* PackageScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA04D35617749B230006FEDA /* PackageScanViewController.m */; };
+		BA04D35F17749FE80006FEDA /* QRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA04D35E17749FE80006FEDA /* QRViewController.m */; };
+		BA04D36217749FF00006FEDA /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA04D36117749FF00006FEDA /* SettingViewController.m */; };
+		BA04D36517749FFA0006FEDA /* HelpHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA04D36417749FFA0006FEDA /* HelpHistoryViewController.m */; };
+		BA04D3681774A0030006FEDA /* SecureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA04D3671774A0030006FEDA /* SecureViewController.m */; };
+		BA10908117781FC300A1B657 /* SettingSecureBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA10908017781FC300A1B657 /* SettingSecureBoardViewController.m */; };
+		BA109084177821B400A1B657 /* SettingSecureDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA109083177821B400A1B657 /* SettingSecureDetailViewController.m */; };
+		BA1090871778245F00A1B657 /* SettingHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA1090861778245E00A1B657 /* SettingHelpViewController.m */; };
+		BA10908A177827DF00A1B657 /* PackageDetalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA109089177827DF00A1B657 /* PackageDetalViewController.m */; };
+		BA10908D1778293600A1B657 /* PackageMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA10908C1778293600A1B657 /* PackageMineViewController.m */; };
+		BA10908F177848D800A1B657 /* boy_1.png in Resources */ = {isa = PBXBuildFile; fileRef = BA10908E177848D800A1B657 /* boy_1.png */; };
+		BA10909517784A2400A1B657 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = BA10909417784A2400A1B657 /* User.m */; };
+		BA10909817784E7100A1B657 /* UserBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA10909717784E7100A1B657 /* UserBoardView.m */; };
+		BA10909C17785AE700A1B657 /* UserDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA10909B17785AE700A1B657 /* UserDetailViewController.m */; };
+		BA906E0117754779004C62C4 /* zbar-back.png in Resources */ = {isa = PBXBuildFile; fileRef = BA906DFC17754778004C62C4 /* zbar-back.png */; };
+		BA906E0217754779004C62C4 /* zbar-help.html in Resources */ = {isa = PBXBuildFile; fileRef = BA906DFD17754778004C62C4 /* zbar-help.html */; };
+		BA906E0317754779004C62C4 /* zbar-helpicons.png in Resources */ = {isa = PBXBuildFile; fileRef = BA906DFE17754778004C62C4 /* zbar-helpicons.png */; };
+		BA906E0417754779004C62C4 /* zbar-samples.png in Resources */ = {isa = PBXBuildFile; fileRef = BA906DFF17754778004C62C4 /* zbar-samples.png */; };
+		BA906E0617754EE4004C62C4 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BA906E0517754EE4004C62C4 /* libiconv.dylib */; };
+		BA906E0817754FB0004C62C4 /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA906E0717754FB0004C62C4 /* libzbar.a */; };
+		BA906E0A1775501A004C62C4 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA906E091775501A004C62C4 /* CoreVideo.framework */; };
+		BA906E0C17755067004C62C4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA906E0B17755067004C62C4 /* AVFoundation.framework */; };
+		BA906E0E17755169004C62C4 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA906E0D17755169004C62C4 /* CoreMedia.framework */; };
+		BA906E12177552AD004C62C4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BA906E11177552AD004C62C4 /* Default.png */; };
+		BA906E1517757332004C62C4 /* RegistSexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA906E1417757332004C62C4 /* RegistSexViewController.m */; };
+		BA906E1817757363004C62C4 /* RegistHeadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA906E1717757363004C62C4 /* RegistHeadViewController.m */; };
+		BA906E1B17757EC4004C62C4 /* RegistDriverLicenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA906E1A17757EC4004C62C4 /* RegistDriverLicenseViewController.m */; };
+		BA906E1E17758134004C62C4 /* RegistCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA906E1D17758132004C62C4 /* RegistCarViewController.m */; };
+		BA906E2117758147004C62C4 /* RegistUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA906E2017758146004C62C4 /* RegistUserViewController.m */; };
+		BA94FAF117798C65006BDE14 /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = BA94FAF017798C65006BDE14 /* Friend.m */; };
+		BA94FAF417799C9F006BDE14 /* FriendDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA94FAF317799C9F006BDE14 /* FriendDetailViewController.m */; };
 		BA9AA0761772F98F00087953 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA9AA0751772F98F00087953 /* UIKit.framework */; };
 		BA9AA0781772F98F00087953 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA9AA0771772F98F00087953 /* Foundation.framework */; };
 		BA9AA07A1772F98F00087953 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA9AA0791772F98F00087953 /* CoreGraphics.framework */; };
 		BA9AA0801772F98F00087953 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA9AA07E1772F98F00087953 /* InfoPlist.strings */; };
 		BA9AA0821772F98F00087953 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9AA0811772F98F00087953 /* main.m */; };
-		BA9AA0881772F98F00087953 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BA9AA0871772F98F00087953 /* Default.png */; };
 		BA9AA08A1772F98F00087953 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA9AA0891772F98F00087953 /* Default@2x.png */; };
 		BA9AA08C1772F98F00087953 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA9AA08B1772F98F00087953 /* Default-568h@2x.png */; };
 		BA9AA0981772FD9600087953 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9AA0951772FD9600087953 /* AppDelegate.m */; };
 		BA9AA09C1773049900087953 /* UIView+UIAdaptation.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9AA09B1773049900087953 /* UIView+UIAdaptation.m */; };
 		BA9AA0A11773061300087953 /* UIScreen+UIWindowSize.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9AA0A01773061300087953 /* UIScreen+UIWindowSize.m */; };
 		BA9AA0A81773086400087953 /* MainSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9AA0A61773086400087953 /* MainSplashViewController.m */; };
-		BA9AA0B1177319BF00087953 /* MainSplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA9AA0AE177319BF00087953 /* MainSplashViewController.xib */; };
-		BA9AA0B2177319BF00087953 /* launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = BA9AA0B0177319BF00087953 /* launcher.png */; };
-		BA9AA0B4177319E000087953 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BA9AA0B3177319E000087953 /* Default.png */; };
 		BA9AA0B7177325CC00087953 /* SplashLastView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9AA0B6177325CC00087953 /* SplashLastView.m */; };
 		BA9AA0BC17732B6C00087953 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9AA0BA17732B6C00087953 /* MainViewController.m */; };
 		BA9AA0C41773394400087953 /* DDMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9AA0C31773394400087953 /* DDMenuController.m */; };
 		BA9AA0C617733B3800087953 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA9AA0C517733B3800087953 /* QuartzCore.framework */; };
 		BA9AA0CA17733BC300087953 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9AA0C817733BC300087953 /* MenuViewController.m */; };
-		BA9AA0CF1773431C00087953 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA9AA0CD1773431C00087953 /* MainViewController.xib */; };
-		BA9AA0D01773431C00087953 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA9AA0CE1773431C00087953 /* MenuViewController.xib */; };
 		BA9AA0D5177344E700087953 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9AA0D3177344E700087953 /* LoginViewController.m */; };
 		BA9AA0DA177344F700087953 /* RegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9AA0D8177344F700087953 /* RegistViewController.m */; };
-		BA9AA0DF1773474B00087953 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA9AA0DD1773474B00087953 /* LoginViewController.xib */; };
-		BA9AA0E01773474B00087953 /* RegistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA9AA0DE1773474B00087953 /* RegistViewController.xib */; };
 		BA9AA0E417734EAF00087953 /* ForgetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9AA0E217734EAD00087953 /* ForgetPwdViewController.m */; };
-		BA9AA0E517734EAF00087953 /* ForgetPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA9AA0E317734EAE00087953 /* ForgetPwdViewController.xib */; };
 		BA9AA0E9177358AC00087953 /* UIViewController+SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9AA0E8177358AC00087953 /* UIViewController+SearchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA04D344177489060006FEDA /* ChatListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatListViewController.h; sourceTree = "<group>"; };
+		BA04D345177489060006FEDA /* ChatListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatListViewController.m; sourceTree = "<group>"; };
+		BA04D34F1774997C0006FEDA /* nav_menu_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_menu_icon@2x.png"; sourceTree = "<group>"; };
+		BA04D351177499E60006FEDA /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
+		BA04D352177499E60006FEDA /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
+		BA04D35517749B230006FEDA /* PackageScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PackageScanViewController.h; sourceTree = "<group>"; };
+		BA04D35617749B230006FEDA /* PackageScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PackageScanViewController.m; sourceTree = "<group>"; };
+		BA04D35D17749FE80006FEDA /* QRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRViewController.h; sourceTree = "<group>"; };
+		BA04D35E17749FE80006FEDA /* QRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRViewController.m; sourceTree = "<group>"; };
+		BA04D36017749FF00006FEDA /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		BA04D36117749FF00006FEDA /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		BA04D36317749FFA0006FEDA /* HelpHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpHistoryViewController.h; sourceTree = "<group>"; };
+		BA04D36417749FFA0006FEDA /* HelpHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpHistoryViewController.m; sourceTree = "<group>"; };
+		BA04D3661774A0030006FEDA /* SecureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecureViewController.h; sourceTree = "<group>"; };
+		BA04D3671774A0030006FEDA /* SecureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecureViewController.m; sourceTree = "<group>"; };
+		BA10907F17781FC300A1B657 /* SettingSecureBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingSecureBoardViewController.h; sourceTree = "<group>"; };
+		BA10908017781FC300A1B657 /* SettingSecureBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingSecureBoardViewController.m; sourceTree = "<group>"; };
+		BA109082177821B400A1B657 /* SettingSecureDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingSecureDetailViewController.h; sourceTree = "<group>"; };
+		BA109083177821B400A1B657 /* SettingSecureDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingSecureDetailViewController.m; sourceTree = "<group>"; };
+		BA1090851778245E00A1B657 /* SettingHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingHelpViewController.h; sourceTree = "<group>"; };
+		BA1090861778245E00A1B657 /* SettingHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingHelpViewController.m; sourceTree = "<group>"; };
+		BA109088177827DF00A1B657 /* PackageDetalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PackageDetalViewController.h; sourceTree = "<group>"; };
+		BA109089177827DF00A1B657 /* PackageDetalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PackageDetalViewController.m; sourceTree = "<group>"; };
+		BA10908B1778293600A1B657 /* PackageMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PackageMineViewController.h; sourceTree = "<group>"; };
+		BA10908C1778293600A1B657 /* PackageMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PackageMineViewController.m; sourceTree = "<group>"; };
+		BA10908E177848D800A1B657 /* boy_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boy_1.png; sourceTree = "<group>"; };
+		BA10909317784A2400A1B657 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		BA10909417784A2400A1B657 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		BA10909617784E7100A1B657 /* UserBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserBoardView.h; sourceTree = "<group>"; };
+		BA10909717784E7100A1B657 /* UserBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserBoardView.m; sourceTree = "<group>"; };
+		BA10909A17785AE700A1B657 /* UserDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailViewController.h; sourceTree = "<group>"; };
+		BA10909B17785AE700A1B657 /* UserDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailViewController.m; sourceTree = "<group>"; };
+		BA906DE617754778004C62C4 /* Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decoder.h; sourceTree = "<group>"; };
+		BA906DE717754778004C62C4 /* Exception.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exception.h; sourceTree = "<group>"; };
+		BA906DE817754778004C62C4 /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
+		BA906DE917754778004C62C4 /* ImageScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageScanner.h; sourceTree = "<group>"; };
+		BA906DEA17754778004C62C4 /* Processor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Processor.h; sourceTree = "<group>"; };
+		BA906DEB17754778004C62C4 /* Scanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scanner.h; sourceTree = "<group>"; };
+		BA906DEC17754778004C62C4 /* Symbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Symbol.h; sourceTree = "<group>"; };
+		BA906DED17754778004C62C4 /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
+		BA906DEE17754778004C62C4 /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Window.h; sourceTree = "<group>"; };
+		BA906DEF17754778004C62C4 /* zbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zbar.h; sourceTree = "<group>"; };
+		BA906DF017754778004C62C4 /* ZBarCameraSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarCameraSimulator.h; sourceTree = "<group>"; };
+		BA906DF117754778004C62C4 /* ZBarCaptureReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarCaptureReader.h; sourceTree = "<group>"; };
+		BA906DF217754778004C62C4 /* ZBarHelpController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarHelpController.h; sourceTree = "<group>"; };
+		BA906DF317754778004C62C4 /* ZBarImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarImage.h; sourceTree = "<group>"; };
+		BA906DF417754778004C62C4 /* ZBarImageScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarImageScanner.h; sourceTree = "<group>"; };
+		BA906DF517754778004C62C4 /* ZBarReaderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderController.h; sourceTree = "<group>"; };
+		BA906DF617754778004C62C4 /* ZBarReaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderView.h; sourceTree = "<group>"; };
+		BA906DF717754778004C62C4 /* ZBarReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderViewController.h; sourceTree = "<group>"; };
+		BA906DF817754778004C62C4 /* ZBarSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarSDK.h; sourceTree = "<group>"; };
+		BA906DF917754778004C62C4 /* ZBarSymbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarSymbol.h; sourceTree = "<group>"; };
+		BA906DFC17754778004C62C4 /* zbar-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-back.png"; sourceTree = "<group>"; };
+		BA906DFD17754778004C62C4 /* zbar-help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "zbar-help.html"; sourceTree = "<group>"; };
+		BA906DFE17754778004C62C4 /* zbar-helpicons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-helpicons.png"; sourceTree = "<group>"; };
+		BA906DFF17754778004C62C4 /* zbar-samples.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-samples.png"; sourceTree = "<group>"; };
+		BA906E0517754EE4004C62C4 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		BA906E0717754FB0004C62C4 /* libzbar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libzbar.a; path = CarHelp/Externals/ZBarSDK/libzbar.a; sourceTree = "<group>"; };
+		BA906E091775501A004C62C4 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		BA906E0B17755067004C62C4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		BA906E0D17755169004C62C4 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		BA906E11177552AD004C62C4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		BA906E1317757332004C62C4 /* RegistSexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistSexViewController.h; sourceTree = "<group>"; };
+		BA906E1417757332004C62C4 /* RegistSexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistSexViewController.m; sourceTree = "<group>"; };
+		BA906E1617757363004C62C4 /* RegistHeadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistHeadViewController.h; sourceTree = "<group>"; };
+		BA906E1717757363004C62C4 /* RegistHeadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistHeadViewController.m; sourceTree = "<group>"; };
+		BA906E1917757EC3004C62C4 /* RegistDriverLicenseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistDriverLicenseViewController.h; sourceTree = "<group>"; };
+		BA906E1A17757EC4004C62C4 /* RegistDriverLicenseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistDriverLicenseViewController.m; sourceTree = "<group>"; };
+		BA906E1C17758132004C62C4 /* RegistCarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistCarViewController.h; sourceTree = "<group>"; };
+		BA906E1D17758132004C62C4 /* RegistCarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistCarViewController.m; sourceTree = "<group>"; };
+		BA906E1F17758146004C62C4 /* RegistUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistUserViewController.h; sourceTree = "<group>"; };
+		BA906E2017758146004C62C4 /* RegistUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistUserViewController.m; sourceTree = "<group>"; };
+		BA94FAEF17798C65006BDE14 /* Friend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Friend.h; sourceTree = "<group>"; };
+		BA94FAF017798C65006BDE14 /* Friend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Friend.m; sourceTree = "<group>"; };
+		BA94FAF217799C9F006BDE14 /* FriendDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendDetailViewController.h; sourceTree = "<group>"; };
+		BA94FAF317799C9F006BDE14 /* FriendDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendDetailViewController.m; sourceTree = "<group>"; };
 		BA9AA0721772F98F00087953 /* CarHelp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarHelp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA9AA0751772F98F00087953 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BA9AA0771772F98F00087953 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -47,7 +148,6 @@
 		BA9AA07F1772F98F00087953 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BA9AA0811772F98F00087953 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BA9AA0831772F98F00087953 /* CarHelp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CarHelp-Prefix.pch"; sourceTree = "<group>"; };
-		BA9AA0871772F98F00087953 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		BA9AA0891772F98F00087953 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		BA9AA08B1772F98F00087953 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BA9AA0941772FD9600087953 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -60,9 +160,6 @@
 		BA9AA0A51773086400087953 /* MainSplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainSplashViewController.h; sourceTree = "<group>"; };
 		BA9AA0A61773086400087953 /* MainSplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainSplashViewController.m; sourceTree = "<group>"; };
 		BA9AA0AB1773109600087953 /* CLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLog.h; sourceTree = "<group>"; };
-		BA9AA0AE177319BF00087953 /* MainSplashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainSplashViewController.xib; sourceTree = "<group>"; };
-		BA9AA0B0177319BF00087953 /* launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launcher.png; sourceTree = "<group>"; };
-		BA9AA0B3177319E000087953 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		BA9AA0B5177325CC00087953 /* SplashLastView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashLastView.h; sourceTree = "<group>"; };
 		BA9AA0B6177325CC00087953 /* SplashLastView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashLastView.m; sourceTree = "<group>"; };
 		BA9AA0B917732B6C00087953 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -72,17 +169,12 @@
 		BA9AA0C517733B3800087953 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		BA9AA0C717733BC300087953 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		BA9AA0C817733BC300087953 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
-		BA9AA0CD1773431C00087953 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
-		BA9AA0CE1773431C00087953 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 		BA9AA0D2177344E700087953 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		BA9AA0D3177344E700087953 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		BA9AA0D7177344F700087953 /* RegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistViewController.h; sourceTree = "<group>"; };
 		BA9AA0D8177344F700087953 /* RegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistViewController.m; sourceTree = "<group>"; };
-		BA9AA0DD1773474B00087953 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		BA9AA0DE1773474B00087953 /* RegistViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistViewController.xib; sourceTree = "<group>"; };
 		BA9AA0E117734EAC00087953 /* ForgetPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPwdViewController.h; sourceTree = "<group>"; };
 		BA9AA0E217734EAD00087953 /* ForgetPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPwdViewController.m; sourceTree = "<group>"; };
-		BA9AA0E317734EAE00087953 /* ForgetPwdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgetPwdViewController.xib; sourceTree = "<group>"; };
 		BA9AA0E7177358AC00087953 /* UIViewController+SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SearchViewController.h"; sourceTree = "<group>"; };
 		BA9AA0E8177358AC00087953 /* UIViewController+SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SearchViewController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +184,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA906E0E17755169004C62C4 /* CoreMedia.framework in Frameworks */,
+				BA906E0C17755067004C62C4 /* AVFoundation.framework in Frameworks */,
+				BA906E0A1775501A004C62C4 /* CoreVideo.framework in Frameworks */,
+				BA906E0817754FB0004C62C4 /* libzbar.a in Frameworks */,
+				BA906E0617754EE4004C62C4 /* libiconv.dylib in Frameworks */,
 				BA9AA0C617733B3800087953 /* QuartzCore.framework in Frameworks */,
 				BA9AA0761772F98F00087953 /* UIKit.framework in Frameworks */,
 				BA9AA0781772F98F00087953 /* Foundation.framework in Frameworks */,
@@ -102,10 +199,183 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA04D342177488EC0006FEDA /* FriendsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BA04D351177499E60006FEDA /* FriendsViewController.h */,
+				BA04D352177499E60006FEDA /* FriendsViewController.m */,
+				BA94FAF217799C9F006BDE14 /* FriendDetailViewController.h */,
+				BA94FAF317799C9F006BDE14 /* FriendDetailViewController.m */,
+			);
+			path = FriendsViewController;
+			sourceTree = "<group>";
+		};
+		BA04D343177488EC0006FEDA /* ChatViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BA04D344177489060006FEDA /* ChatListViewController.h */,
+				BA04D345177489060006FEDA /* ChatListViewController.m */,
+			);
+			path = ChatViewController;
+			sourceTree = "<group>";
+		};
+		BA04D34E1774997C0006FEDA /* MenuView */ = {
+			isa = PBXGroup;
+			children = (
+				BA10908E177848D800A1B657 /* boy_1.png */,
+				BA04D34F1774997C0006FEDA /* nav_menu_icon@2x.png */,
+			);
+			path = MenuView;
+			sourceTree = "<group>";
+		};
+		BA04D35417749B110006FEDA /* PackageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BA04D35517749B230006FEDA /* PackageScanViewController.h */,
+				BA04D35617749B230006FEDA /* PackageScanViewController.m */,
+				BA109088177827DF00A1B657 /* PackageDetalViewController.h */,
+				BA109089177827DF00A1B657 /* PackageDetalViewController.m */,
+				BA10908B1778293600A1B657 /* PackageMineViewController.h */,
+				BA10908C1778293600A1B657 /* PackageMineViewController.m */,
+			);
+			path = PackageViewController;
+			sourceTree = "<group>";
+		};
+		BA04D35817749F6A0006FEDA /* QRViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BA04D35D17749FE80006FEDA /* QRViewController.h */,
+				BA04D35E17749FE80006FEDA /* QRViewController.m */,
+			);
+			path = QRViewController;
+			sourceTree = "<group>";
+		};
+		BA04D35917749FD30006FEDA /* SecureViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BA04D3661774A0030006FEDA /* SecureViewController.h */,
+				BA04D3671774A0030006FEDA /* SecureViewController.m */,
+			);
+			path = SecureViewController;
+			sourceTree = "<group>";
+		};
+		BA04D35A17749FD40006FEDA /* HelpHistoryViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BA04D36317749FFA0006FEDA /* HelpHistoryViewController.h */,
+				BA04D36417749FFA0006FEDA /* HelpHistoryViewController.m */,
+			);
+			path = HelpHistoryViewController;
+			sourceTree = "<group>";
+		};
+		BA04D35B17749FD50006FEDA /* SettingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BA10907F17781FC300A1B657 /* SettingSecureBoardViewController.h */,
+				BA10908017781FC300A1B657 /* SettingSecureBoardViewController.m */,
+				BA109082177821B400A1B657 /* SettingSecureDetailViewController.h */,
+				BA109083177821B400A1B657 /* SettingSecureDetailViewController.m */,
+				BA04D36017749FF00006FEDA /* SettingViewController.h */,
+				BA04D36117749FF00006FEDA /* SettingViewController.m */,
+				BA1090851778245E00A1B657 /* SettingHelpViewController.h */,
+				BA1090861778245E00A1B657 /* SettingHelpViewController.m */,
+			);
+			path = SettingViewController;
+			sourceTree = "<group>";
+		};
+		BA10909217784A1600A1B657 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				BA10909317784A2400A1B657 /* User.h */,
+				BA10909417784A2400A1B657 /* User.m */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		BA10909917785AC000A1B657 /* UserDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BA10909A17785AE700A1B657 /* UserDetailViewController.h */,
+				BA10909B17785AE700A1B657 /* UserDetailViewController.m */,
+			);
+			path = UserDetailViewController;
+			sourceTree = "<group>";
+		};
+		BA906DE217754778004C62C4 /* ZBarSDK */ = {
+			isa = PBXGroup;
+			children = (
+				BA906DE317754778004C62C4 /* Headers */,
+				BA906DFB17754778004C62C4 /* Resources */,
+			);
+			path = ZBarSDK;
+			sourceTree = "<group>";
+		};
+		BA906DE317754778004C62C4 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				BA906DE417754778004C62C4 /* ZBarSDK */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		BA906DE417754778004C62C4 /* ZBarSDK */ = {
+			isa = PBXGroup;
+			children = (
+				BA906DE517754778004C62C4 /* zbar */,
+				BA906DEF17754778004C62C4 /* zbar.h */,
+				BA906DF017754778004C62C4 /* ZBarCameraSimulator.h */,
+				BA906DF117754778004C62C4 /* ZBarCaptureReader.h */,
+				BA906DF217754778004C62C4 /* ZBarHelpController.h */,
+				BA906DF317754778004C62C4 /* ZBarImage.h */,
+				BA906DF417754778004C62C4 /* ZBarImageScanner.h */,
+				BA906DF517754778004C62C4 /* ZBarReaderController.h */,
+				BA906DF617754778004C62C4 /* ZBarReaderView.h */,
+				BA906DF717754778004C62C4 /* ZBarReaderViewController.h */,
+				BA906DF817754778004C62C4 /* ZBarSDK.h */,
+				BA906DF917754778004C62C4 /* ZBarSymbol.h */,
+			);
+			path = ZBarSDK;
+			sourceTree = "<group>";
+		};
+		BA906DE517754778004C62C4 /* zbar */ = {
+			isa = PBXGroup;
+			children = (
+				BA906DE617754778004C62C4 /* Decoder.h */,
+				BA906DE717754778004C62C4 /* Exception.h */,
+				BA906DE817754778004C62C4 /* Image.h */,
+				BA906DE917754778004C62C4 /* ImageScanner.h */,
+				BA906DEA17754778004C62C4 /* Processor.h */,
+				BA906DEB17754778004C62C4 /* Scanner.h */,
+				BA906DEC17754778004C62C4 /* Symbol.h */,
+				BA906DED17754778004C62C4 /* Video.h */,
+				BA906DEE17754778004C62C4 /* Window.h */,
+			);
+			path = zbar;
+			sourceTree = "<group>";
+		};
+		BA906DFB17754778004C62C4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BA906DFC17754778004C62C4 /* zbar-back.png */,
+				BA906DFD17754778004C62C4 /* zbar-help.html */,
+				BA906DFE17754778004C62C4 /* zbar-helpicons.png */,
+				BA906DFF17754778004C62C4 /* zbar-samples.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BA94FAEE17798C4F006BDE14 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				BA94FAEF17798C65006BDE14 /* Friend.h */,
+				BA94FAF017798C65006BDE14 /* Friend.m */,
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
 		BA9AA0691772F98F00087953 = {
 			isa = PBXGroup;
 			children = (
-				BA9AA0B3177319E000087953 /* Default.png */,
 				BA9AA07B1772F98F00087953 /* CarHelp */,
 				BA9AA0741772F98F00087953 /* Frameworks */,
 				BA9AA0731772F98F00087953 /* Products */,
@@ -123,7 +393,12 @@
 		BA9AA0741772F98F00087953 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BA906E0717754FB0004C62C4 /* libzbar.a */,
+				BA906E0517754EE4004C62C4 /* libiconv.dylib */,
+				BA906E0B17755067004C62C4 /* AVFoundation.framework */,
 				BA9AA0791772F98F00087953 /* CoreGraphics.framework */,
+				BA906E0D17755169004C62C4 /* CoreMedia.framework */,
+				BA906E091775501A004C62C4 /* CoreVideo.framework */,
 				BA9AA0771772F98F00087953 /* Foundation.framework */,
 				BA9AA0C517733B3800087953 /* QuartzCore.framework */,
 				BA9AA0751772F98F00087953 /* UIKit.framework */,
@@ -145,11 +420,11 @@
 		BA9AA07C1772F98F00087953 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BA906E11177552AD004C62C4 /* Default.png */,
 				BA9AA07D1772F98F00087953 /* CarHelp-Info.plist */,
 				BA9AA07E1772F98F00087953 /* InfoPlist.strings */,
 				BA9AA0811772F98F00087953 /* main.m */,
 				BA9AA0831772F98F00087953 /* CarHelp-Prefix.pch */,
-				BA9AA0871772F98F00087953 /* Default.png */,
 				BA9AA0891772F98F00087953 /* Default@2x.png */,
 				BA9AA08B1772F98F00087953 /* Default-568h@2x.png */,
 			);
@@ -178,6 +453,7 @@
 		BA9AA0961772FD9600087953 /* Externals */ = {
 			isa = PBXGroup;
 			children = (
+				BA906DE217754778004C62C4 /* ZBarSDK */,
 				BA9AA0E61773588B00087953 /* UIViewController+SearchViewController */,
 				BA9AA0C11773394400087953 /* DDMenuController */,
 				BA9AA0AA1773109500087953 /* Debug */,
@@ -190,7 +466,6 @@
 		BA9AA0971772FD9600087953 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				BA9AA0AC177319BF00087953 /* View */,
 				BA9AA0AF177319BF00087953 /* Images */,
 			);
 			path = Resources;
@@ -208,9 +483,17 @@
 		BA9AA09D177304C200087953 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				BA04D343177488EC0006FEDA /* ChatViewController */,
+				BA04D342177488EC0006FEDA /* FriendsViewController */,
+				BA04D35A17749FD40006FEDA /* HelpHistoryViewController */,
 				BA9AA0A41773086400087953 /* MainSplashViewController */,
 				BA9AA0B817732B4F00087953 /* MainViewController */,
+				BA04D35417749B110006FEDA /* PackageViewController */,
+				BA04D35817749F6A0006FEDA /* QRViewController */,
 				BA9AA0D1177344D300087953 /* RegistAndLoginViewController */,
+				BA04D35917749FD30006FEDA /* SecureViewController */,
+				BA04D35B17749FD50006FEDA /* SettingViewController */,
+				BA10909917785AC000A1B657 /* UserDetailViewController */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -227,6 +510,8 @@
 		BA9AA0A21773067100087953 /* ShareData */ = {
 			isa = PBXGroup;
 			children = (
+				BA94FAEE17798C4F006BDE14 /* Friends */,
+				BA10909217784A1600A1B657 /* User */,
 				BA9AA0A31773068500087953 /* ShareData.h */,
 			);
 			path = ShareData;
@@ -251,28 +536,10 @@
 			path = Debug;
 			sourceTree = "<group>";
 		};
-		BA9AA0AC177319BF00087953 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				BA9AA0DC1773474B00087953 /* RegistAndLoginView */,
-				BA9AA0CC1773431C00087953 /* MainView */,
-				BA9AA0AD177319BF00087953 /* MainSplashView */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		BA9AA0AD177319BF00087953 /* MainSplashView */ = {
-			isa = PBXGroup;
-			children = (
-				BA9AA0AE177319BF00087953 /* MainSplashViewController.xib */,
-			);
-			path = MainSplashView;
-			sourceTree = "<group>";
-		};
 		BA9AA0AF177319BF00087953 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				BA9AA0B0177319BF00087953 /* launcher.png */,
+				BA04D34E1774997C0006FEDA /* MenuView */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -284,6 +551,8 @@
 				BA9AA0BA17732B6C00087953 /* MainViewController.m */,
 				BA9AA0C717733BC300087953 /* MenuViewController.h */,
 				BA9AA0C817733BC300087953 /* MenuViewController.m */,
+				BA10909617784E7100A1B657 /* UserBoardView.h */,
+				BA10909717784E7100A1B657 /* UserBoardView.m */,
 			);
 			path = MainViewController;
 			sourceTree = "<group>";
@@ -297,36 +566,27 @@
 			path = DDMenuController;
 			sourceTree = "<group>";
 		};
-		BA9AA0CC1773431C00087953 /* MainView */ = {
-			isa = PBXGroup;
-			children = (
-				BA9AA0CD1773431C00087953 /* MainViewController.xib */,
-				BA9AA0CE1773431C00087953 /* MenuViewController.xib */,
-			);
-			path = MainView;
-			sourceTree = "<group>";
-		};
 		BA9AA0D1177344D300087953 /* RegistAndLoginViewController */ = {
 			isa = PBXGroup;
 			children = (
-				BA9AA0D2177344E700087953 /* LoginViewController.h */,
-				BA9AA0D3177344E700087953 /* LoginViewController.m */,
-				BA9AA0D7177344F700087953 /* RegistViewController.h */,
-				BA9AA0D8177344F700087953 /* RegistViewController.m */,
 				BA9AA0E117734EAC00087953 /* ForgetPwdViewController.h */,
 				BA9AA0E217734EAD00087953 /* ForgetPwdViewController.m */,
-				BA9AA0E317734EAE00087953 /* ForgetPwdViewController.xib */,
+				BA9AA0D2177344E700087953 /* LoginViewController.h */,
+				BA9AA0D3177344E700087953 /* LoginViewController.m */,
+				BA906E1917757EC3004C62C4 /* RegistDriverLicenseViewController.h */,
+				BA906E1A17757EC4004C62C4 /* RegistDriverLicenseViewController.m */,
+				BA906E1C17758132004C62C4 /* RegistCarViewController.h */,
+				BA906E1D17758132004C62C4 /* RegistCarViewController.m */,
+				BA906E1617757363004C62C4 /* RegistHeadViewController.h */,
+				BA906E1717757363004C62C4 /* RegistHeadViewController.m */,
+				BA906E1317757332004C62C4 /* RegistSexViewController.h */,
+				BA906E1417757332004C62C4 /* RegistSexViewController.m */,
+				BA906E1F17758146004C62C4 /* RegistUserViewController.h */,
+				BA906E2017758146004C62C4 /* RegistUserViewController.m */,
+				BA9AA0D7177344F700087953 /* RegistViewController.h */,
+				BA9AA0D8177344F700087953 /* RegistViewController.m */,
 			);
 			path = RegistAndLoginViewController;
-			sourceTree = "<group>";
-		};
-		BA9AA0DC1773474B00087953 /* RegistAndLoginView */ = {
-			isa = PBXGroup;
-			children = (
-				BA9AA0DD1773474B00087953 /* LoginViewController.xib */,
-				BA9AA0DE1773474B00087953 /* RegistViewController.xib */,
-			);
-			path = RegistAndLoginView;
 			sourceTree = "<group>";
 		};
 		BA9AA0E61773588B00087953 /* UIViewController+SearchViewController */ = {
@@ -390,17 +650,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA9AA0801772F98F00087953 /* InfoPlist.strings in Resources */,
-				BA9AA0881772F98F00087953 /* Default.png in Resources */,
 				BA9AA08A1772F98F00087953 /* Default@2x.png in Resources */,
 				BA9AA08C1772F98F00087953 /* Default-568h@2x.png in Resources */,
-				BA9AA0B1177319BF00087953 /* MainSplashViewController.xib in Resources */,
-				BA9AA0B2177319BF00087953 /* launcher.png in Resources */,
-				BA9AA0B4177319E000087953 /* Default.png in Resources */,
-				BA9AA0CF1773431C00087953 /* MainViewController.xib in Resources */,
-				BA9AA0D01773431C00087953 /* MenuViewController.xib in Resources */,
-				BA9AA0DF1773474B00087953 /* LoginViewController.xib in Resources */,
-				BA9AA0E01773474B00087953 /* RegistViewController.xib in Resources */,
-				BA9AA0E517734EAF00087953 /* ForgetPwdViewController.xib in Resources */,
+				BA04D3501774997C0006FEDA /* nav_menu_icon@2x.png in Resources */,
+				BA906E0117754779004C62C4 /* zbar-back.png in Resources */,
+				BA906E0217754779004C62C4 /* zbar-help.html in Resources */,
+				BA906E0317754779004C62C4 /* zbar-helpicons.png in Resources */,
+				BA906E0417754779004C62C4 /* zbar-samples.png in Resources */,
+				BA906E12177552AD004C62C4 /* Default.png in Resources */,
+				BA10908F177848D800A1B657 /* boy_1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +682,28 @@
 				BA9AA0DA177344F700087953 /* RegistViewController.m in Sources */,
 				BA9AA0E417734EAF00087953 /* ForgetPwdViewController.m in Sources */,
 				BA9AA0E9177358AC00087953 /* UIViewController+SearchViewController.m in Sources */,
+				BA04D347177489060006FEDA /* ChatListViewController.m in Sources */,
+				BA04D353177499E60006FEDA /* FriendsViewController.m in Sources */,
+				BA04D35717749B230006FEDA /* PackageScanViewController.m in Sources */,
+				BA04D35F17749FE80006FEDA /* QRViewController.m in Sources */,
+				BA04D36217749FF00006FEDA /* SettingViewController.m in Sources */,
+				BA04D36517749FFA0006FEDA /* HelpHistoryViewController.m in Sources */,
+				BA04D3681774A0030006FEDA /* SecureViewController.m in Sources */,
+				BA906E1517757332004C62C4 /* RegistSexViewController.m in Sources */,
+				BA906E1817757363004C62C4 /* RegistHeadViewController.m in Sources */,
+				BA906E1B17757EC4004C62C4 /* RegistDriverLicenseViewController.m in Sources */,
+				BA906E1E17758134004C62C4 /* RegistCarViewController.m in Sources */,
+				BA906E2117758147004C62C4 /* RegistUserViewController.m in Sources */,
+				BA10908117781FC300A1B657 /* SettingSecureBoardViewController.m in Sources */,
+				BA109084177821B400A1B657 /* SettingSecureDetailViewController.m in Sources */,
+				BA1090871778245F00A1B657 /* SettingHelpViewController.m in Sources */,
+				BA10908A177827DF00A1B657 /* PackageDetalViewController.m in Sources */,
+				BA10908D1778293600A1B657 /* PackageMineViewController.m in Sources */,
+				BA10909517784A2400A1B657 /* User.m in Sources */,
+				BA10909817784E7100A1B657 /* UserBoardView.m in Sources */,
+				BA10909C17785AE700A1B657 /* UserDetailViewController.m in Sources */,
+				BA94FAF117798C65006BDE14 /* Friend.m in Sources */,
+				BA94FAF417799C9F006BDE14 /* FriendDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,6 +782,11 @@
 				GCC_PREFIX_HEADER = "CarHelp/CarHelp-Prefix.pch";
 				INFOPLIST_FILE = "CarHelp/CarHelp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/CarHelp/Externals/ZBarSDK\"",
+				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -514,6 +799,11 @@
 				GCC_PREFIX_HEADER = "CarHelp/CarHelp-Prefix.pch";
 				INFOPLIST_FILE = "CarHelp/CarHelp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/CarHelp/Externals/ZBarSDK\"",
+				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -538,6 +828,7 @@
 				BA9AA0911772F98F00087953 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

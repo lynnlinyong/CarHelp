@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ForgetPwdViewController : UIViewController
+@interface ForgetPwdViewController : UIViewController<UITextFieldDelegate>
+{
+}
 
+@property (nonatomic, retain)  UITextField *emailFld;
 @end

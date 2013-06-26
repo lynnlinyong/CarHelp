@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ShareData.h"
 
-@interface MenuViewController : UIViewController
+@interface MenuViewController : UIViewController<
+                                                UITableViewDelegate,
+                                                UITableViewDataSource,
+                                                UserBoardViewDelegate>
+{
+    User *user;
+}
+@property (nonatomic, retain) User *user;
+@property (nonatomic, retain) UITableView *menuTab;
 
 @end

@@ -487,7 +487,7 @@
         [self.delegate menuController:self willShowViewController:self.leftViewController];
     }
     _menuFlags.showingLeftView = YES;
-    [self showShadow:YES];
+    [self showShadow:NO];
 
     UIView *view = self.leftViewController.view;
 	CGRect frame = self.view.bounds;

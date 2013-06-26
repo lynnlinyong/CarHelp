@@ -11,6 +11,7 @@
 @interface LoginViewController : UIViewController<UITextFieldDelegate>
 {
 }
+
 @property (nonatomic, retain) UITextField *userNameFld;
 @property (nonatomic, retain) UITextField *pwdFld;
 @end
