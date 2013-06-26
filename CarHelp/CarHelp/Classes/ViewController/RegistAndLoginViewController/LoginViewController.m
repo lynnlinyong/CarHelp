@@ -113,6 +113,28 @@
               action:@selector(doFgBtnClicked:)
     forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:fgBtn];
+    
+    UILabel *loginLab = [[UILabel alloc]init];
+    loginLab.frame = [UIView fitCGRect:CGRectMake(20, 300, 180, 20)];
+    loginLab.text  = @"其他方式登录";
+    [self.view addSubview:loginLab];
+    [loginLab release];
+    
+    UIButton *tcBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    tcBtn.frame = [UIView fitCGRect:CGRectMake(30, 330, 60, 30)];
+    [tcBtn setTitle:@"QQ" forState:UIControlStateNormal];
+    [tcBtn addTarget:self
+              action:@selector(doTcBtnClicked:)
+    forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:tcBtn];
+    
+    UIButton *sinaBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    sinaBtn.frame = [UIView fitCGRect:CGRectMake(100, 330, 60, 30)];
+    [sinaBtn setTitle:@"Sina" forState:UIControlStateNormal];
+    [sinaBtn addTarget:self
+                action:@selector(doSinaBtnClicked:)
+      forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:sinaBtn];
 }
 
 #pragma mark -
@@ -141,6 +163,16 @@
     ForgetPwdViewController *fgVc = [[ForgetPwdViewController alloc]init];
     [self.navigationController pushViewController:fgVc animated:YES];
     [fgVc release];
+}
+
+- (void) doSinaBtnClicked:(id)sender
+{
+    
+}
+
+- (void) doTcBtnClicked:(id)sender
+{
+    
 }
 
 #pragma mark -

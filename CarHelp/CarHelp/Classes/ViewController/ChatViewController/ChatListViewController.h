@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ChatListViewController : UIViewController
+@interface ChatListViewController : UIViewController<
+                                                    UITableViewDelegate,
+                                                    UITableViewDataSource>
+{
+    NSMutableArray  *chatArray;
+    UITableView     *chatTab;
+}
 
 @end

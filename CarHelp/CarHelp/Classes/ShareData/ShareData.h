@@ -32,6 +32,7 @@
 #import "RegistHeadViewController.h"
 #import "MainSplashViewController.h"
 #import "RegistUserViewController.h"
+#import "HelpDetailViewController.h"
 #import "HelpHistoryViewController.h"
 #import "SettingHelpViewController.h"
 #import "PackageMineViewController.h"

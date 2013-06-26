@@ -41,6 +41,7 @@
 		BA906E2117758147004C62C4 /* RegistUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA906E2017758146004C62C4 /* RegistUserViewController.m */; };
 		BA94FAF117798C65006BDE14 /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = BA94FAF017798C65006BDE14 /* Friend.m */; };
 		BA94FAF417799C9F006BDE14 /* FriendDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA94FAF317799C9F006BDE14 /* FriendDetailViewController.m */; };
+		BA954589177B097C009ACA8A /* HelpDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA954588177B097B009ACA8A /* HelpDetailViewController.m */; };
 		BA9AA0761772F98F00087953 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA9AA0751772F98F00087953 /* UIKit.framework */; };
 		BA9AA0781772F98F00087953 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA9AA0771772F98F00087953 /* Foundation.framework */; };
 		BA9AA07A1772F98F00087953 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA9AA0791772F98F00087953 /* CoreGraphics.framework */; };
@@ -140,6 +141,8 @@
 		BA94FAF017798C65006BDE14 /* Friend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Friend.m; sourceTree = "<group>"; };
 		BA94FAF217799C9F006BDE14 /* FriendDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendDetailViewController.h; sourceTree = "<group>"; };
 		BA94FAF317799C9F006BDE14 /* FriendDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendDetailViewController.m; sourceTree = "<group>"; };
+		BA954587177B097B009ACA8A /* HelpDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpDetailViewController.h; sourceTree = "<group>"; };
+		BA954588177B097B009ACA8A /* HelpDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpDetailViewController.m; sourceTree = "<group>"; };
 		BA9AA0721772F98F00087953 /* CarHelp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarHelp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA9AA0751772F98F00087953 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BA9AA0771772F98F00087953 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -264,6 +267,8 @@
 			children = (
 				BA04D36317749FFA0006FEDA /* HelpHistoryViewController.h */,
 				BA04D36417749FFA0006FEDA /* HelpHistoryViewController.m */,
+				BA954587177B097B009ACA8A /* HelpDetailViewController.h */,
+				BA954588177B097B009ACA8A /* HelpDetailViewController.m */,
 			);
 			path = HelpHistoryViewController;
 			sourceTree = "<group>";
@@ -510,9 +515,9 @@
 		BA9AA0A21773067100087953 /* ShareData */ = {
 			isa = PBXGroup;
 			children = (
+				BA9AA0A31773068500087953 /* ShareData.h */,
 				BA94FAEE17798C4F006BDE14 /* Friends */,
 				BA10909217784A1600A1B657 /* User */,
-				BA9AA0A31773068500087953 /* ShareData.h */,
 			);
 			path = ShareData;
 			sourceTree = "<group>";
@@ -704,6 +709,7 @@
 				BA10909C17785AE700A1B657 /* UserDetailViewController.m in Sources */,
 				BA94FAF117798C65006BDE14 /* Friend.m in Sources */,
 				BA94FAF417799C9F006BDE14 /* FriendDetailViewController.m in Sources */,
+				BA954589177B097C009ACA8A /* HelpDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

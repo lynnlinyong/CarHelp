@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HelpHistoryViewController : UIViewController
+@interface HelpHistoryViewController : UIViewController<
+                                                        UITableViewDelegate,
+                                                        UITableViewDataSource>
+{
+    NSMutableArray *historyArray;
+    UITableView    *historyTab;
+}
 
 @end
