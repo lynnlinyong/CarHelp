@@ -17,4 +17,6 @@
     #import "UIView+UIAdaptation.h"
     #import "UIScreen+UIWindowSize.h"
     #import "UIViewController+SearchViewController.h"
+
+    #import "ShareData.h"
 #endif

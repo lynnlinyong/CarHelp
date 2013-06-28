@@ -10,6 +10,8 @@
 #define CarHelp_ShareData_h
 
 #import "User.h"
+#import "SinaWeibo.h"
+#import "TCWBEngine.h"
 #import "UserBoardView.h"
 
 #import "AppDelegate.h"
@@ -42,4 +44,31 @@
 #import "SettingSecureBoardViewController.h"
 #import "SettingSecureDetailViewController.h"
 #import "RegistDriverLicenseViewController.h"
+
+/**
+ * Tecent Weibo
+ **/
+#ifndef WiressSDKDemoAppKey
+#define WiressSDKDemoAppKey     @"801378247"
+#endif
+
+#ifndef WiressSDKDemoAppSecret
+#define WiressSDKDemoAppSecret  @"a207035b5d2baa90a8320db0798f4127"
+#endif
+
+#ifndef REDIRECTURI
+#define REDIRECTURI @"http://www.baidu.com"
+#endif
+
+#define TCWBAlertViewLogOutTag          100
+#define TCWBAlertViewLogInTag           101
+
+
+/**
+ * Sina Weibo
+ **/
+#define kAppKey             @"2993155058"
+#define kAppSecret          @"2ac13aa9f067aad4137324affc8b93b7"
+#define kAppRedirectURI     @"http://www.sina.com"
+
 #endif

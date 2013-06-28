@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LoginViewController : UIViewController<UITextFieldDelegate>
+@interface LoginViewController : UIViewController<
+                                                  SinaWeiboDelegate,
+                                                  UITextFieldDelegate,
+                                                  SinaWeiboRequestDelegate>
 {
+    SinaWeibo   *sinaweibo;
+    TCWBEngine  *weiboEngine;
 }
 
 @property (nonatomic, retain) UITextField *userNameFld;

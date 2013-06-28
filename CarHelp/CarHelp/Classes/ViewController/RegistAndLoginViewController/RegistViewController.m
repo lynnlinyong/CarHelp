@@ -5,7 +5,6 @@
 //  Created by lynn on 13-6-20.
 //  Copyright (c) 2013年 lynn. All rights reserved.
 //
-#import "ShareData.h"
 #import "RegistViewController.h"
 
 @interface RegistViewController ()

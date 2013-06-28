@@ -5,7 +5,6 @@
 //  Created by lynn on 13-6-20.
 //  Copyright (c) 2013年 lynn. All rights reserved.
 //
-#import "ShareData.h"
 #import "LoginViewController.h"
 
 @interface LoginViewController ()
@@ -50,14 +49,15 @@
 {
     pwdFld.delegate = nil;
     userNameFld.delegate = nil;
-    
+    weiboEngine = nil;
     [super viewDidUnload];
 }
 
 - (void) dealloc
 {
-    [pwdFld release];
+    [pwdFld      release];
     [userNameFld release];
+    [weiboEngine release];
     [super dealloc];
 }
 
@@ -135,6 +135,30 @@
                 action:@selector(doSinaBtnClicked:)
       forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:sinaBtn];
+    
+    /**
+     * Init Tecent Weibo SDK
+     **/
+    weiboEngine = [[TCWBEngine alloc] initWithAppKey:WiressSDKDemoAppKey
+                                           andSecret:WiressSDKDemoAppSecret
+                                      andRedirectUrl:REDIRECTURI];
+    [weiboEngine setRootViewController:self];
+    
+    /**
+     * Init Sina Weibo SDK
+     **/
+    sinaweibo = [[SinaWeibo alloc] initWithAppKey:kAppKey
+                                        appSecret:kAppSecret
+                                   appRedirectURI:kAppRedirectURI
+                                      andDelegate:self];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSDictionary *sinaweiboInfo = [defaults objectForKey:@"SinaWeiboAuthData"];
+    if ([sinaweiboInfo objectForKey:@"AccessTokenKey"] && [sinaweiboInfo objectForKey:@"ExpirationDateKey"] && [sinaweiboInfo objectForKey:@"UserIDKey"])
+    {
+        sinaweibo.accessToken = [sinaweiboInfo objectForKey:@"AccessTokenKey"];
+        sinaweibo.expirationDate = [sinaweiboInfo objectForKey:@"ExpirationDateKey"];
+        sinaweibo.userID = [sinaweiboInfo objectForKey:@"UserIDKey"];
+    }
 }
 
 #pragma mark -
@@ -167,12 +191,78 @@
 
 - (void) doSinaBtnClicked:(id)sender
 {
-    
+    [sinaweibo logIn];
 }
 
 - (void) doTcBtnClicked:(id)sender
 {
-    
+    [weiboEngine logInWithDelegate:self
+                         onSuccess:@selector(onSuccessLogin)
+                         onFailure:@selector(onFailureLogin:)];
+}
+
+#pragma mark -
+#pragma mark - Tecent Weibo Call Back
+- (void)onSuccessLogin
+{
+    MainViewController *mVc     = [[MainViewController alloc]init];
+    MenuViewController *menuVc  = [[MenuViewController alloc]init];
+    UINavigationController *nvc = [[UINavigationController alloc]initWithRootViewController:mVc];
+    DDMenuController *dMenuVc   = [[DDMenuController alloc]initWithRootViewController:nvc];
+    dMenuVc.leftViewController  = menuVc;
+    [self.navigationController pushViewController:dMenuVc
+                                         animated:YES];
+}
+
+- (void)onFailureLogin:(NSError *)error
+{
+//    [indicatorView stopAnimating];
+    NSString *message = [[NSString alloc] initWithFormat:@"%@",[NSNumber numberWithInteger:[error code]]];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:[error domain]
+                                                        message:message
+                                                       delegate:self
+                                              cancelButtonTitle:@"确定"
+                                              otherButtonTitles:nil];
+    [alertView show];
+    [alertView release];
+    [message   release];
+}
+
+#pragma mark -
+#pragma mark - SinaWeibo Delegate
+- (void)sinaweiboDidLogIn:(SinaWeibo *)sweibo
+{
+    NSLog(@"sinaweiboDidLogIn userID = %@ accesstoken = %@ expirationDate = %@ refresh_token = %@", sweibo.userID, sweibo.accessToken, sweibo.expirationDate,sweibo.refreshToken);
+}
+
+- (void)sinaweiboDidLogOut:(SinaWeibo *)sinaweibo
+{
+    NSLog(@"sinaweiboDidLogOut");
+}
+
+- (void)sinaweiboLogInDidCancel:(SinaWeibo *)sinaweibo
+{
+    NSLog(@"sinaweiboLogInDidCancel");
+}
+
+- (void)sinaweibo:(SinaWeibo *)sinaweibo logInDidFailWithError:(NSError *)error
+{
+    NSLog(@"sinaweibo logInDidFailWithError %@", error);
+}
+
+- (void)sinaweibo:(SinaWeibo *)sinaweibo accessTokenInvalidOrExpired:(NSError *)error
+{
+    NSLog(@"sinaweiboAccessTokenInvalidOrExpired %@", error);
+}
+
+#pragma mark - 
+#pragma mark - SinaWeiboRequest Delegate
+- (void)request:(SinaWeiboRequest *)request didFailWithError:(NSError *)error
+{
+}
+
+- (void)request:(SinaWeiboRequest *)request didFinishLoadingWithResult:(id)result
+{
 }
 
 #pragma mark -

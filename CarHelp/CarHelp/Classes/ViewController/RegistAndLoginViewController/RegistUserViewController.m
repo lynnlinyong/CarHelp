@@ -5,7 +5,6 @@
 //  Created by lynn on 13-6-22.
 //  Copyright (c) 2013年 lynn. All rights reserved.
 //
-#import "ShareData.h"
 #import "RegistUserViewController.h"
 
 @interface RegistUserViewController ()

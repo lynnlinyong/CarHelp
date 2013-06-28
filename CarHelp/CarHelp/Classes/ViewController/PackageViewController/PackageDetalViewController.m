@@ -5,7 +5,6 @@
 //  Created by lynn on 13-6-24.
 //  Copyright (c) 2013年 lynn. All rights reserved.
 //
-#import "ShareData.h"
 #import "PackageDetalViewController.h"
 
 @interface PackageDetalViewController ()

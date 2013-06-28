@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ShareData.h"
 
 @interface MainSplashViewController : UIViewController<UIScrollViewDelegate,
                                                        SplashLastDelegate>

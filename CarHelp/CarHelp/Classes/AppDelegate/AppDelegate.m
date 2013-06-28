@@ -6,7 +6,6 @@
 //  Copyright (c) 2013年 lynn. All rights reserved.
 //
 
-#import "ShareData.h"
 #import "AppDelegate.h"
 
 @implementation AppDelegate
