@@ -10,8 +10,6 @@
 #define CarHelp_ShareData_h
 
 #import "User.h"
-#import "SinaWeibo.h"
-#import "TCWBEngine.h"
 #import "UserBoardView.h"
 
 #import "AppDelegate.h"
@@ -72,4 +70,8 @@
 #define kAppSecret          @"2ac13aa9f067aad4137324affc8b93b7"
 #define kAppRedirectURI     @"http://www.sina.com"
 
+/**
+ * Baidu Map Key
+ **/
+#define kBaiduMapKey        @"36A24491E65A4AB6998857EF6EC072AD4295E113"
 #endif

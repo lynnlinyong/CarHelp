@@ -14,6 +14,9 @@
 
     #import "CLog.h"
     #import "ZBarSDK.h"
+    #import "BMapKit.h"
+    #import "SinaWeibo.h"
+    #import "TCWBEngine.h"
     #import "UIView+UIAdaptation.h"
     #import "UIScreen+UIWindowSize.h"
     #import "UIViewController+SearchViewController.h"

@@ -185,7 +185,7 @@
             UILabel *pwdLab = [[UILabel alloc]init];
             pwdLab.frame = CGRectMake(60, 10, 200, 20);
             pwdLab.text  = @"修改密码";
-            pwdLab.textAlignment   = UITextAlignmentCenter;
+            pwdLab.textAlignment   = NSTextAlignmentCenter;
             pwdLab.backgroundColor = [UIColor clearColor];
             [cell addSubview:pwdLab];
             [pwdLab release];
@@ -196,7 +196,7 @@
             UILabel *logOutLab = [[UILabel alloc]init];
             logOutLab.frame = CGRectMake(60, 10, 200, 20);
             logOutLab.text  = @"退出登录";
-            logOutLab.textAlignment   = UITextAlignmentCenter;
+            logOutLab.textAlignment   = NSTextAlignmentCenter;
             logOutLab.backgroundColor = [UIColor clearColor];
             [cell addSubview:logOutLab];
             [logOutLab release];

@@ -59,7 +59,7 @@
     infoLab.frame = [UIView fitCGRect:CGRectMake(40, 50, 240, 80)];
     infoLab.text  = @"找回密码功能权限于邮件找回,爱车帮帮帮将把你重置密码的信息发送到您预留的邮箱中,请查收邮箱进行重置密码/短信找回.";
     infoLab.numberOfLines = 0;
-    infoLab.lineBreakMode = UILineBreakModeWordWrap;
+    infoLab.lineBreakMode = NSLineBreakByWordWrapping;
     [self.view addSubview:infoLab];
     [infoLab release];
     

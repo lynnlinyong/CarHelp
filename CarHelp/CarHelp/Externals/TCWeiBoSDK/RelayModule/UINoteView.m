@@ -63,7 +63,7 @@
         [label setTag:TAG_LABEL];
         
         [label setNumberOfLines:0];
-        [label setLineBreakMode:UILineBreakModeClip];
+        [label setLineBreakMode:NSLineBreakByWordWrapping];
         [label setBackgroundColor:[UIColor clearColor]];
         [label setTextColor:[UIColor whiteColor]];
         [label setFont:[UIFont systemFontOfSize:15]];
@@ -119,7 +119,7 @@
 	
 	CGSize szNoteText = [labelNote.text sizeWithFont:labelNote.font
                                    constrainedToSize:CGSizeMake(LABEL_WIDTH, MAXFLOAT)
-                                       lineBreakMode:UILineBreakModeClip];
+                                       lineBreakMode:NSLineBreakByWordWrapping];
 	[labelNote setFrame:CGRectMake((self.frame.size.width - szNoteText.width)/2, 105, szNoteText.width, szNoteText.height)];
 	
     /*

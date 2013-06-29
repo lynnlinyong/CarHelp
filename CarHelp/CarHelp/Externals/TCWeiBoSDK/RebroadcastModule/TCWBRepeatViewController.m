@@ -85,7 +85,7 @@
     [labelTitle setBackgroundColor:[UIColor clearColor]];
     [labelTitle setFont:[UIFont systemFontOfSize:17]];
     [labelTitle setTextColor:[UIColor whiteColor]];
-    [labelTitle setTextAlignment:UITextAlignmentCenter];
+    [labelTitle setTextAlignment:NSTextAlignmentCenter];
     NSBundle *main = [NSBundle mainBundle];
     NSString *strRebroadcast = [main localizedStringForKey:kLanguageRelay value:nil table:kTCWBTable];    
     [labelTitle setText:strRebroadcast];

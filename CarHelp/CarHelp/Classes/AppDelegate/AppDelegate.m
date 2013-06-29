@@ -12,6 +12,7 @@
 
 - (void)dealloc
 {
+    [_mapManager release];
     [_window release];
     [super dealloc];
 }
@@ -20,6 +21,9 @@
 {
     self.window = [[[UIWindow alloc]initWithFrame:[UIScreen getCurrentBounds]]autorelease];
     CDLog(@"width:%f, height:%f", [UIScreen getCurrentBounds].size.width,[UIScreen getCurrentBounds].size.height);
+    
+    [self initBaiduMap];
+    
     //第一次启动程序,进入Splash页面
     if (![[NSUserDefaults standardUserDefaults] boolForKey:@"firstLaunch"])
     {
@@ -70,4 +74,20 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma mark -
+#pragma mark - Custom Action
+- (void) initBaiduMap
+{
+    _mapManager = [[BMKMapManager alloc]init];
+    // 如果要关注网络及授权验证事件，请设定     generalDelegate参数
+    BOOL ret = [_mapManager start:kBaiduMapKey  generalDelegate:nil];
+    if (!ret)
+    {
+        CDLog(@"Baidu Manager Start Failed!");
+    }
+    else
+    {
+        CDLog(@"Baidu Manager Start Success!");
+    }
+}
 @end
