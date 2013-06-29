@@ -219,6 +219,10 @@
         }
         case 1:     //修改密码
         {
+            UpdatePwdViewController *upVc = [[UpdatePwdViewController alloc]init];
+            [self.navigationController pushViewController:upVc
+                                                 animated:YES];
+            [upVc release];
             break;
         }
         case 2:     //退出登录

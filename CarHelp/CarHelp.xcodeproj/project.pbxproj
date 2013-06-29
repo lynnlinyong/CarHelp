@@ -24,6 +24,7 @@
 		BA10909517784A2400A1B657 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = BA10909417784A2400A1B657 /* User.m */; };
 		BA10909817784E7100A1B657 /* UserBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA10909717784E7100A1B657 /* UserBoardView.m */; };
 		BA10909C17785AE700A1B657 /* UserDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA10909B17785AE700A1B657 /* UserDetailViewController.m */; };
+		BA7AEFBB177D82DB00DC7909 /* UpdatePwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AEFBA177D82DA00DC7909 /* UpdatePwdViewController.m */; };
 		BA906E0117754779004C62C4 /* zbar-back.png in Resources */ = {isa = PBXBuildFile; fileRef = BA906DFC17754778004C62C4 /* zbar-back.png */; };
 		BA906E0217754779004C62C4 /* zbar-help.html in Resources */ = {isa = PBXBuildFile; fileRef = BA906DFD17754778004C62C4 /* zbar-help.html */; };
 		BA906E0317754779004C62C4 /* zbar-helpicons.png in Resources */ = {isa = PBXBuildFile; fileRef = BA906DFE17754778004C62C4 /* zbar-helpicons.png */; };
@@ -192,6 +193,8 @@
 		BA10909717784E7100A1B657 /* UserBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserBoardView.m; sourceTree = "<group>"; };
 		BA10909A17785AE700A1B657 /* UserDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailViewController.h; sourceTree = "<group>"; };
 		BA10909B17785AE700A1B657 /* UserDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailViewController.m; sourceTree = "<group>"; };
+		BA7AEFB9177D82DA00DC7909 /* UpdatePwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdatePwdViewController.h; sourceTree = "<group>"; };
+		BA7AEFBA177D82DA00DC7909 /* UpdatePwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdatePwdViewController.m; sourceTree = "<group>"; };
 		BA906DE617754778004C62C4 /* Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decoder.h; sourceTree = "<group>"; };
 		BA906DE717754778004C62C4 /* Exception.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exception.h; sourceTree = "<group>"; };
 		BA906DE817754778004C62C4 /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
@@ -537,6 +540,8 @@
 			children = (
 				BA10909A17785AE700A1B657 /* UserDetailViewController.h */,
 				BA10909B17785AE700A1B657 /* UserDetailViewController.m */,
+				BA7AEFB9177D82DA00DC7909 /* UpdatePwdViewController.h */,
+				BA7AEFBA177D82DA00DC7909 /* UpdatePwdViewController.m */,
 			);
 			path = UserDetailViewController;
 			sourceTree = "<group>";
@@ -1260,6 +1265,7 @@
 				BA96ED59177C290E00A14D34 /* SinaWeibo.m in Sources */,
 				BA96ED5A177C290E00A14D34 /* SinaWeiboAuthorizeView.m in Sources */,
 				BA96ED5B177C290E00A14D34 /* SinaWeiboRequest.m in Sources */,
+				BA7AEFBB177D82DB00DC7909 /* UpdatePwdViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

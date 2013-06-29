@@ -141,14 +141,14 @@
         NSRange scope = [urlString rangeOfString:@"#"];
         NSString *code = [urlString substringFromIndex:scope.location + scope.length];
         self.returnCode = code;
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@""
-                                                            message:@"授权成功"
-                                                           delegate:self
-                                                  cancelButtonTitle:@"确定"
-                                                  otherButtonTitles:nil];
-        [alertView show];
-        [alertView release];
-
+//        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@""
+//                                                            message:@"授权成功"
+//                                                           delegate:self
+//                                                  cancelButtonTitle:@"确定"
+//                                                  otherButtonTitles:nil];
+//        [alertView show];
+//        [alertView release];
+        [self dismissModalViewControllerAnimated:YES];
     }
     
     [urlString release];

@@ -30,6 +30,7 @@
 #import "ForgetPwdViewController.h"
 #import "RegistSexViewController.h"
 #import "RegistCarViewController.h"
+#import "UpdatePwdViewController.h"
 #import "UserDetailViewController.h"
 #import "RegistHeadViewController.h"
 #import "MainSplashViewController.h"

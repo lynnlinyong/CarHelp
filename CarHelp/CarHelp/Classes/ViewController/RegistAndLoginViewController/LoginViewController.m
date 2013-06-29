@@ -161,9 +161,7 @@
     }
 }
 
-#pragma mark -
-#pragma mark UIButton Clicked Action
-- (void) doLoginBtnClicked:(id)sender
+- (void) gotoMainView
 {
     MainViewController *mVc     = [[MainViewController alloc]init];
     MenuViewController *menuVc  = [[MenuViewController alloc]init];
@@ -172,6 +170,13 @@
     dMenuVc.leftViewController  = menuVc;
     [self.navigationController pushViewController:dMenuVc
                                          animated:YES];
+}
+
+#pragma mark -
+#pragma mark UIButton Clicked Action
+- (void) doLoginBtnClicked:(id)sender
+{
+    [self gotoMainView];
 }
 
 - (void) doRegistBtnClicked:(id)sender
@@ -205,13 +210,7 @@
 #pragma mark - Tecent Weibo Call Back
 - (void)onSuccessLogin
 {
-    MainViewController *mVc     = [[MainViewController alloc]init];
-    MenuViewController *menuVc  = [[MenuViewController alloc]init];
-    UINavigationController *nvc = [[UINavigationController alloc]initWithRootViewController:mVc];
-    DDMenuController *dMenuVc   = [[DDMenuController alloc]initWithRootViewController:nvc];
-    dMenuVc.leftViewController  = menuVc;
-    [self.navigationController pushViewController:dMenuVc
-                                         animated:YES];
+    [self gotoMainView];
 }
 
 - (void)onFailureLogin:(NSError *)error
@@ -233,6 +232,7 @@
 - (void)sinaweiboDidLogIn:(SinaWeibo *)sweibo
 {
     NSLog(@"sinaweiboDidLogIn userID = %@ accesstoken = %@ expirationDate = %@ refresh_token = %@", sweibo.userID, sweibo.accessToken, sweibo.expirationDate,sweibo.refreshToken);
+    [self gotoMainView];
 }
 
 - (void)sinaweiboDidLogOut:(SinaWeibo *)sinaweibo
