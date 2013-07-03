@@ -29,6 +29,7 @@ typedef NSUInteger BMKAnnotationViewDragState;
 @protocol BMKAnnotation;
 @class BMKMapView;
 @class BMKMapViewInternal;
+
 ///标注view
 @interface BMKAnnotationView : UIView
 {

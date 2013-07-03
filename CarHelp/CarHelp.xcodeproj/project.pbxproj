@@ -136,6 +136,9 @@
 		BA96ED59177C290E00A14D34 /* SinaWeibo.m in Sources */ = {isa = PBXBuildFile; fileRef = BA96ED51177C290E00A14D34 /* SinaWeibo.m */; };
 		BA96ED5A177C290E00A14D34 /* SinaWeiboAuthorizeView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA96ED53177C290E00A14D34 /* SinaWeiboAuthorizeView.m */; };
 		BA96ED5B177C290E00A14D34 /* SinaWeiboRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BA96ED56177C290E00A14D34 /* SinaWeiboRequest.m */; };
+		BA9740E81784A0B7003D223B /* DstCalloutAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9740E11784A0B7003D223B /* DstCalloutAnnotation.m */; };
+		BA9740E91784A0B7003D223B /* DstCalloutAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9740E41784A0B7003D223B /* DstCalloutAnnotationView.m */; };
+		BA9740EA1784A0B7003D223B /* DstPointCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9740E71784A0B7003D223B /* DstPointCell.m */; };
 		BA97D4CF177EDA8A005BAB66 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA97D4CE177EDA8A005BAB66 /* OpenGLES.framework */; };
 		BA97D4D4177EDCE0005BAB66 /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BA97D4D2177EDCE0005BAB66 /* mapapi.bundle */; };
 		BA97D4D6177EDDB9005BAB66 /* libbaidumap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA97D4D5177EDDB9005BAB66 /* libbaidumap.a */; };
@@ -159,6 +162,11 @@
 		BA9AA0DA177344F700087953 /* RegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9AA0D8177344F700087953 /* RegistViewController.m */; };
 		BA9AA0E417734EAF00087953 /* ForgetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9AA0E217734EAD00087953 /* ForgetPwdViewController.m */; };
 		BA9AA0E9177358AC00087953 /* UIViewController+SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9AA0E8177358AC00087953 /* UIViewController+SearchViewController.m */; };
+		BA9D5007178420E40006742C /* NiftySearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9D5006178420E40006742C /* NiftySearchView.m */; };
+		BA9D5017178423A50006742C /* UISearchBarBookmarks.png in Resources */ = {isa = PBXBuildFile; fileRef = BA9D5013178423A50006742C /* UISearchBarBookmarks.png */; };
+		BA9D5018178423A50006742C /* UISearchBarBookmarks@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA9D5014178423A50006742C /* UISearchBarBookmarks@2x.png */; };
+		BA9D5019178423A50006742C /* UISearchBarBookmarksPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = BA9D5015178423A50006742C /* UISearchBarBookmarksPressed.png */; };
+		BA9D501A178423A50006742C /* UISearchBarBookmarksPressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA9D5016178423A50006742C /* UISearchBarBookmarksPressed@2x.png */; };
 		BAFCC9AD177EDFCD0046E0F0 /* pinyin.c in Sources */ = {isa = PBXBuildFile; fileRef = BAFCC9AC177EDFCD0046E0F0 /* pinyin.c */; };
 /* End PBXBuildFile section */
 
@@ -376,6 +384,12 @@
 		BA96ED54177C290E00A14D34 /* SinaWeiboConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinaWeiboConstants.h; sourceTree = "<group>"; };
 		BA96ED55177C290E00A14D34 /* SinaWeiboRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinaWeiboRequest.h; sourceTree = "<group>"; };
 		BA96ED56177C290E00A14D34 /* SinaWeiboRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinaWeiboRequest.m; sourceTree = "<group>"; };
+		BA9740E01784A0B7003D223B /* DstCalloutAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DstCalloutAnnotation.h; sourceTree = "<group>"; };
+		BA9740E11784A0B7003D223B /* DstCalloutAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DstCalloutAnnotation.m; sourceTree = "<group>"; };
+		BA9740E31784A0B7003D223B /* DstCalloutAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DstCalloutAnnotationView.h; sourceTree = "<group>"; };
+		BA9740E41784A0B7003D223B /* DstCalloutAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DstCalloutAnnotationView.m; sourceTree = "<group>"; };
+		BA9740E61784A0B7003D223B /* DstPointCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DstPointCell.h; sourceTree = "<group>"; };
+		BA9740E71784A0B7003D223B /* DstPointCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DstPointCell.m; sourceTree = "<group>"; };
 		BA97D4B1177EDA3B005BAB66 /* BMKVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKVersion.h; sourceTree = "<group>"; };
 		BA97D4B2177EDA3B005BAB66 /* BMKMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKMapView.h; sourceTree = "<group>"; };
 		BA97D4B3177EDA3B005BAB66 /* BMKTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKTypes.h; sourceTree = "<group>"; };
@@ -445,6 +459,12 @@
 		BA9AA0E217734EAD00087953 /* ForgetPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPwdViewController.m; sourceTree = "<group>"; };
 		BA9AA0E7177358AC00087953 /* UIViewController+SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SearchViewController.h"; sourceTree = "<group>"; };
 		BA9AA0E8177358AC00087953 /* UIViewController+SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SearchViewController.m"; sourceTree = "<group>"; };
+		BA9D5005178420E40006742C /* NiftySearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NiftySearchView.h; sourceTree = "<group>"; };
+		BA9D5006178420E40006742C /* NiftySearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NiftySearchView.m; sourceTree = "<group>"; };
+		BA9D5013178423A50006742C /* UISearchBarBookmarks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UISearchBarBookmarks.png; sourceTree = "<group>"; };
+		BA9D5014178423A50006742C /* UISearchBarBookmarks@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UISearchBarBookmarks@2x.png"; sourceTree = "<group>"; };
+		BA9D5015178423A50006742C /* UISearchBarBookmarksPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UISearchBarBookmarksPressed.png; sourceTree = "<group>"; };
+		BA9D5016178423A50006742C /* UISearchBarBookmarksPressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UISearchBarBookmarksPressed@2x.png"; sourceTree = "<group>"; };
 		BAFCC9AC177EDFCD0046E0F0 /* pinyin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pinyin.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -865,6 +885,43 @@
 			path = SinaWeibo;
 			sourceTree = "<group>";
 		};
+		BA9740DE1784A0B7003D223B /* DstCallout */ = {
+			isa = PBXGroup;
+			children = (
+				BA9740DF1784A0B7003D223B /* DstCalloutAnnotation */,
+				BA9740E21784A0B7003D223B /* DstCalloutAnnotationView */,
+				BA9740E51784A0B7003D223B /* DstPointCell */,
+			);
+			path = DstCallout;
+			sourceTree = "<group>";
+		};
+		BA9740DF1784A0B7003D223B /* DstCalloutAnnotation */ = {
+			isa = PBXGroup;
+			children = (
+				BA9740E01784A0B7003D223B /* DstCalloutAnnotation.h */,
+				BA9740E11784A0B7003D223B /* DstCalloutAnnotation.m */,
+			);
+			path = DstCalloutAnnotation;
+			sourceTree = "<group>";
+		};
+		BA9740E21784A0B7003D223B /* DstCalloutAnnotationView */ = {
+			isa = PBXGroup;
+			children = (
+				BA9740E31784A0B7003D223B /* DstCalloutAnnotationView.h */,
+				BA9740E41784A0B7003D223B /* DstCalloutAnnotationView.m */,
+			);
+			path = DstCalloutAnnotationView;
+			sourceTree = "<group>";
+		};
+		BA9740E51784A0B7003D223B /* DstPointCell */ = {
+			isa = PBXGroup;
+			children = (
+				BA9740E61784A0B7003D223B /* DstPointCell.h */,
+				BA9740E71784A0B7003D223B /* DstPointCell.m */,
+			);
+			path = DstPointCell;
+			sourceTree = "<group>";
+		};
 		BA97D4B0177EDA0E005BAB66 /* BaiduMap */ = {
 			isa = PBXGroup;
 			children = (
@@ -998,6 +1055,8 @@
 		BA9AA0961772FD9600087953 /* Externals */ = {
 			isa = PBXGroup;
 			children = (
+				BA9740DE1784A0B7003D223B /* DstCallout */,
+				BA9D5004178420E30006742C /* NiftySearchView */,
 				BA97D4B0177EDA0E005BAB66 /* BaiduMap */,
 				BA96ED4A177C290E00A14D34 /* sinaweibo_ios_sdk */,
 				BA9AA0C11773394400087953 /* DDMenuController */,
@@ -1087,6 +1146,7 @@
 		BA9AA0AF177319BF00087953 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				BA9D5011178423A50006742C /* MainView */,
 				BA04D34E1774997C0006FEDA /* MenuView */,
 			);
 			path = Images;
@@ -1144,6 +1204,34 @@
 				BA9AA0E8177358AC00087953 /* UIViewController+SearchViewController.m */,
 			);
 			path = "UIViewController+SearchViewController";
+			sourceTree = "<group>";
+		};
+		BA9D5004178420E30006742C /* NiftySearchView */ = {
+			isa = PBXGroup;
+			children = (
+				BA9D5005178420E40006742C /* NiftySearchView.h */,
+				BA9D5006178420E40006742C /* NiftySearchView.m */,
+			);
+			path = NiftySearchView;
+			sourceTree = "<group>";
+		};
+		BA9D5011178423A50006742C /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				BA9D5012178423A50006742C /* NiftySearchView */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		BA9D5012178423A50006742C /* NiftySearchView */ = {
+			isa = PBXGroup;
+			children = (
+				BA9D5013178423A50006742C /* UISearchBarBookmarks.png */,
+				BA9D5014178423A50006742C /* UISearchBarBookmarks@2x.png */,
+				BA9D5015178423A50006742C /* UISearchBarBookmarksPressed.png */,
+				BA9D5016178423A50006742C /* UISearchBarBookmarksPressed@2x.png */,
+			);
+			path = NiftySearchView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1267,6 +1355,10 @@
 				BA96ED21177C17F100A14D34 /* test@2x.png in Resources */,
 				BA96ED58177C290E00A14D34 /* SinaWeibo.bundle in Resources */,
 				BA97D4D4177EDCE0005BAB66 /* mapapi.bundle in Resources */,
+				BA9D5017178423A50006742C /* UISearchBarBookmarks.png in Resources */,
+				BA9D5018178423A50006742C /* UISearchBarBookmarks@2x.png in Resources */,
+				BA9D5019178423A50006742C /* UISearchBarBookmarksPressed.png in Resources */,
+				BA9D501A178423A50006742C /* UISearchBarBookmarksPressed@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1347,6 +1439,10 @@
 				BA96ED5B177C290E00A14D34 /* SinaWeiboRequest.m in Sources */,
 				BA7AEFBB177D82DB00DC7909 /* UpdatePwdViewController.m in Sources */,
 				BAFCC9AD177EDFCD0046E0F0 /* pinyin.c in Sources */,
+				BA9D5007178420E40006742C /* NiftySearchView.m in Sources */,
+				BA9740E81784A0B7003D223B /* DstCalloutAnnotation.m in Sources */,
+				BA9740E91784A0B7003D223B /* DstCalloutAnnotationView.m in Sources */,
+				BA9740EA1784A0B7003D223B /* DstPointCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

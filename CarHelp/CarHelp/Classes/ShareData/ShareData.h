@@ -10,7 +10,11 @@
 #define CarHelp_ShareData_h
 
 #import "User.h"
+#import "DstPointCell.h"
 #import "UserBoardView.h"
+#import "NiftySearchView.h"
+#import "DstCalloutAnnotation.h"
+#import "DstCalloutAnnotationView.h"
 
 #import "AppDelegate.h"
 #import "SplashLastView.h"
@@ -74,4 +78,10 @@
  * Baidu Map Key
  **/
 #define kBaiduMapKey        @"36A24491E65A4AB6998857EF6EC072AD4295E113"
+
+/**
+ * Baidu Map Span
+ **/
+#define SPAN_LAT   0.005
+#define SPAN_LONG  0.005
 #endif

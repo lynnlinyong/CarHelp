@@ -8,6 +8,22 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainViewController : UIViewController
+@interface MainViewController : UIViewController<
+                                                BMKSearchDelegate,
+                                                BMKMapViewDelegate,
+                                                NiftySearchViewDelegate>
+{
+    BMKMapView      *mapView;
+    CLLocationCoordinate2D pastLoc;
+    
+    /**
+     * 查询
+     **/
+    BMKSearch       *searchPos;
+    BMKAddrInfo     *curAddrInfo;
+    NiftySearchView *searchView;
+    DstCalloutAnnotation *dstAnn;
+}
 
+@property (nonatomic, retain) BMKMapView *mapView;
 @end
