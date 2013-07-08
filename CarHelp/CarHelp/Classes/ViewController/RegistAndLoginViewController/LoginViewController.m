@@ -164,12 +164,23 @@
 - (void) gotoMainView
 {
     MainViewController *mVc     = [[MainViewController alloc]init];
+    ChatListViewController *cVc = [[ChatListViewController alloc]init];
+    FriendsViewController *fVc  = [[FriendsViewController alloc]init];
+    PackageScanViewController *pVc = [[PackageScanViewController alloc]init];
+    QRViewController *qVc = [[QRViewController alloc]init];
+    SecureViewController *sVc = [[SecureViewController alloc]init];
+    HelpHistoryViewController *hVc = [[HelpHistoryViewController alloc]init];
+    SettingViewController *setVc = [[SettingViewController alloc]init];
+    
     MenuViewController *menuVc  = [[MenuViewController alloc]init];
-    UINavigationController *nvc = [[UINavigationController alloc]initWithRootViewController:mVc];
-    DDMenuController *dMenuVc   = [[DDMenuController alloc]initWithRootViewController:nvc];
+    menuVc.viewContrs = [[[NSMutableArray alloc]initWithObjects:mVc,cVc,fVc,pVc,qVc,sVc,hVc,setVc, nil]mutableCopy];
+    
+    UINavigationController *nvc = [[[UINavigationController alloc]initWithRootViewController:mVc]autorelease];
+    DDMenuController *dMenuVc   = [[[DDMenuController alloc]initWithRootViewController:nvc]autorelease];
     dMenuVc.leftViewController  = menuVc;
     [self.navigationController pushViewController:dMenuVc
                                          animated:YES];
+    
 }
 
 #pragma mark -

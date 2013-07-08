@@ -15,7 +15,9 @@
 {
     User *user;
 }
+
 @property (nonatomic, retain) User *user;
+@property (nonatomic, retain) NSMutableArray *viewContrs;
 @property (nonatomic, retain) UITableView *menuTab;
 
 @end

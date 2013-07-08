@@ -10,11 +10,20 @@
 #define CarHelp_ShareData_h
 
 #import "User.h"
+#import "Cell.h"
+#import "UIGridView.h"
 #import "DstPointCell.h"
 #import "UserBoardView.h"
 #import "NiftySearchView.h"
+#import "UIGridViewDelegate.h"
 #import "DstCalloutAnnotation.h"
+#import "NoticeWaitTableViewCell.h"
 #import "DstCalloutAnnotationView.h"
+#import "DstNoticeViewController.h"
+
+#import "HelpCell.h"
+#import "HelpCalloutAnnotation.h"
+#import "HelpCalloutAnnotationView.h"
 
 #import "AppDelegate.h"
 #import "SplashLastView.h"
@@ -29,10 +38,13 @@
 #import "SettingViewController.h"
 #import "ChatListViewController.h"
 #import "ChatListViewController.h"
+#import "HelpTypeViewController.h"
 #import "ForgetPwdViewController.h"
 #import "RegistSexViewController.h"
 #import "RegistCarViewController.h"
 #import "UpdatePwdViewController.h"
+#import "HelpShareViewController.h"
+#import "HelpSearchViewController.h"
 #import "UserDetailViewController.h"
 #import "RegistHeadViewController.h"
 #import "MainSplashViewController.h"
@@ -44,10 +56,10 @@
 #import "PackageScanViewController.h"
 #import "PackageDetalViewController.h"
 #import "FriendDetailViewController.h"
+#import "SearchHelpMessageViewController.h"
 #import "SettingSecureBoardViewController.h"
 #import "SettingSecureDetailViewController.h"
 #import "RegistDriverLicenseViewController.h"
-
 /**
  * Tecent Weibo
  **/
@@ -82,6 +94,30 @@
 /**
  * Baidu Map Span
  **/
-#define SPAN_LAT   0.005
-#define SPAN_LONG  0.005
+#define SPAN_LAT   0.01
+#define SPAN_LONG  0.01
+
+/**
+ * Notice Center Name
+ **/
+#define NOTICE_MSG               @"NOTICE_MSG"
+#define NOTICE_TYPE              @"NOTICE_TYPE"
+
+typedef NS_ENUM(NSInteger, TAG_NOTICE_TYPE) {
+    NOTICE_HELP = 0,            //一键求助
+    NOTICE_CLOSE,               //关闭
+    NOTICE_HOLD_ON,             //稍等
+    NOTICE_SEND_MSG,            //发送求助
+    NOTICE_CANCEL_MSG           //取消帮助
+};
+
+/**
+ * System Message Type
+ **/
+#define SYSTEM_MESSAGE_TYPE      @"SYSTEM_MESSAGE_TYPE"
+
+typedef NS_ENUM(NSInteger, _TAG_SYSTEM_MESSAGE_TYPE) {
+    SYSTEM_MESSAGE_WAIT_HELP = 0           //等候帮助
+};
+
 #endif

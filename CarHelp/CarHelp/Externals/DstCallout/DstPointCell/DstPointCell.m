@@ -8,6 +8,46 @@
 
 #import "DstPointCell.h"
 
+@interface UIImage(InternalMethod)
+
+- (UIImage*)imageRotatedByDegrees:(CGFloat)degrees;
+
+@end
+
+@implementation UIImage(InternalMethod)
+
+- (UIImage*)imageRotatedByDegrees:(CGFloat)degrees
+{
+    
+    CGFloat width = CGImageGetWidth(self.CGImage);
+    CGFloat height = CGImageGetHeight(self.CGImage);
+    
+	CGSize rotatedSize;
+    
+    rotatedSize.width = width;
+    rotatedSize.height = height;
+    
+	UIGraphicsBeginImageContext(rotatedSize);
+	CGContextRef bitmap = UIGraphicsGetCurrentContext();
+	CGContextTranslateCTM(bitmap, rotatedSize.width/2, rotatedSize.height/2);
+	CGContextRotateCTM(bitmap, degrees * M_PI / 180);
+	CGContextRotateCTM(bitmap, M_PI);
+	CGContextScaleCTM(bitmap, -1.0, 1.0);
+	CGContextDrawImage(bitmap, CGRectMake(-rotatedSize.width/2, -rotatedSize.height/2, rotatedSize.width, rotatedSize.height), self.CGImage);
+	UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
+	UIGraphicsEndImageContext();
+	return newImage;
+}
+
+@end
+
+
+@implementation RouteAnnotation
+
+@synthesize type = _type;
+@synthesize degree = _degree;
+@end
+
 @implementation DstPointCell
 @synthesize dstLab;
 @synthesize delegate;
@@ -17,8 +57,9 @@
     self = [super initWithFrame:frame];
     if (self) {
         reSearchBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        reSearchBtn.tag = 0;
         reSearchBtn.frame = CGRectMake(0, 0, frame.size.width/4, frame.size.height);
-        [reSearchBtn setTitle:@"RS"
+        [reSearchBtn setTitle:@"X"
                      forState:UIControlStateNormal];
         [reSearchBtn addTarget:self
                         action:@selector(doButtonClicked:)
@@ -32,8 +73,9 @@
         [self addSubview:dstLab];
         
         beginBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        beginBtn.tag = 1;
         beginBtn.frame = CGRectMake(frame.size.width*3/4, 0, frame.size.width/4, frame.size.height);
-        [beginBtn setTitle:@"BG"
+        [beginBtn setTitle:@"->"
                   forState:UIControlStateNormal];
         [beginBtn addTarget:self
                      action:@selector(doButtonClicked:)

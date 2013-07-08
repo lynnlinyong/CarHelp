@@ -17,8 +17,11 @@
     #import "BMapKit.h"
     #import "SinaWeibo.h"
     #import "TCWBEngine.h"
-    #import "UIView+UIAdaptation.h"
+    #import "LBorderView.h"
+    #import "RMSwipeTableViewCell.h"
     #import "UIScreen+UIWindowSize.h"
+    #import "UIView+UIAdaptation.h"
+    #import "UIViewController+MJPopupViewController.h"
     #import "UIViewController+SearchViewController.h"
 
     #import "ShareData.h"

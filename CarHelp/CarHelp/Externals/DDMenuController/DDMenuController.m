@@ -52,7 +52,7 @@
 
 - (id)initWithRootViewController:(UIViewController*)controller {
     if ((self = [super init])) {
-        _root = controller;
+        _root = [controller retain];
     }
     return self;
 }

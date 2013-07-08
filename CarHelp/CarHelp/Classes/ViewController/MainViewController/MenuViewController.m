@@ -14,6 +14,8 @@
 @implementation MenuViewController
 @synthesize menuTab;
 @synthesize user;
+@synthesize viewContrs;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -43,6 +45,9 @@
 
 - (void) dealloc
 {
+    [viewContrs removeAllObjects];
+    [viewContrs release];
+    
     [menuTab release];
     [super dealloc];
 }
@@ -94,7 +99,6 @@
     UILabel *label = [[UILabel alloc]init];
     label.frame = CGRectMake(5, 0, cell.frame.size.width, cell.frame.size.height);
     [cell addSubview:label];
-    
     switch (indexPath.row)
     {
         case 0:
@@ -171,60 +175,60 @@
     {
         case 0:     //首页
         {
-            MainViewController *mvc     = [[MainViewController alloc]init];
-            UINavigationController *nVc = [[UINavigationController alloc] initWithRootViewController:mvc];
+//            MainViewController *mvc     = [[MainViewController alloc]init];
+            UINavigationController *nVc = [[UINavigationController alloc] initWithRootViewController:[viewContrs objectAtIndex:0]];
             [menuVc setRootController:nVc
                              animated:YES];
             break;
         }
         case 1:     //会话
         {
-            ChatListViewController *cVc = [[ChatListViewController alloc]init];
-            UINavigationController *nVc = [[UINavigationController alloc] initWithRootViewController:cVc];
+//            ChatListViewController *cVc = [[ChatListViewController alloc]init];
+            UINavigationController *nVc = [[UINavigationController alloc] initWithRootViewController:[viewContrs objectAtIndex:1]];
             [menuVc setRootController:nVc
                              animated:YES];
             break;
         }
         case 2:    //助友列表
         {
-            FriendsViewController *fVc = [[FriendsViewController alloc]init];
-            UINavigationController*nvc = [[UINavigationController alloc]initWithRootViewController:fVc];
+//            FriendsViewController *fVc = [[FriendsViewController alloc]init];
+            UINavigationController*nvc = [[UINavigationController alloc]initWithRootViewController:[viewContrs objectAtIndex:2]];
             [menuVc setRootController:nvc
                              animated:YES];
             break;
         }
         case 3:    //我的装备
         {
-            PackageScanViewController *pVc = [[PackageScanViewController alloc]init];
-            UINavigationController*nvc = [[UINavigationController alloc]initWithRootViewController:pVc];
+//            PackageScanViewController *pVc = [[PackageScanViewController alloc]init];
+            UINavigationController*nvc = [[UINavigationController alloc]initWithRootViewController:[viewContrs objectAtIndex:3]];
             [menuVc setRootController:nvc animated:YES];
             break;
         }
         case 4:    //扫一扫
         {
-            QRViewController *qVc = [[QRViewController alloc]init];
-            UINavigationController*nvc = [[UINavigationController alloc]initWithRootViewController:qVc];
+//            QRViewController *qVc = [[QRViewController alloc]init];
+            UINavigationController*nvc = [[UINavigationController alloc]initWithRootViewController:[viewContrs objectAtIndex:4]];
             [menuVc setRootController:nvc animated:YES];
             break;
         }
         case 5:    //保险激活
         {
-            SecureViewController *sVc = [[SecureViewController alloc]init];
-            UINavigationController*nvc = [[UINavigationController alloc]initWithRootViewController:sVc];
+//            SecureViewController *sVc = [[SecureViewController alloc]init];
+            UINavigationController*nvc = [[UINavigationController alloc]initWithRootViewController:[viewContrs objectAtIndex:5]];
             [menuVc setRootController:nvc animated:YES];
             break;
         }
         case 6:    //救帮黑匣子
         {
-            HelpHistoryViewController *hVc = [[HelpHistoryViewController alloc]init];
-            UINavigationController*nvc = [[UINavigationController alloc]initWithRootViewController:hVc];
+//            HelpHistoryViewController *hVc = [[HelpHistoryViewController alloc]init];
+            UINavigationController*nvc = [[UINavigationController alloc]initWithRootViewController:[viewContrs objectAtIndex:6]];
             [menuVc setRootController:nvc animated:YES];
             break;
         }
         case 7:    //设置
         {
-            SettingViewController *sVc = [[SettingViewController alloc]init];
-            UINavigationController*nvc = [[UINavigationController alloc]initWithRootViewController:sVc];
+//            SettingViewController *sVc = [[SettingViewController alloc]init];
+            UINavigationController*nvc = [[UINavigationController alloc]initWithRootViewController:[viewContrs objectAtIndex:7]];
             [menuVc setRootController:nvc animated:YES];
             break;
         }
