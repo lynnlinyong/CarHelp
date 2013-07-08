@@ -14,6 +14,7 @@
 #import "UIGridView.h"
 #import "DstPointCell.h"
 #import "UserBoardView.h"
+#import "SearchHelpCell.h"
 #import "NiftySearchView.h"
 #import "UIGridViewDelegate.h"
 #import "DstCalloutAnnotation.h"
@@ -21,9 +22,12 @@
 #import "DstCalloutAnnotationView.h"
 #import "DstNoticeViewController.h"
 
-#import "HelpCell.h"
-#import "HelpCalloutAnnotation.h"
-#import "HelpCalloutAnnotationView.h"
+#import "CustomPointAnnotation.h"
+
+#import "HelpFriendCell.h"
+#import "HelpCalloutCell.h"
+#import "CalloutAnnotation.h"
+#import "CalloutAnnotationView.h"
 
 #import "AppDelegate.h"
 #import "SplashLastView.h"
@@ -54,6 +58,7 @@
 #import "SettingHelpViewController.h"
 #import "PackageMineViewController.h"
 #import "PackageScanViewController.h"
+#import "HelpContentViewController.h"
 #import "PackageDetalViewController.h"
 #import "FriendDetailViewController.h"
 #import "SearchHelpMessageViewController.h"
@@ -108,7 +113,8 @@ typedef NS_ENUM(NSInteger, TAG_NOTICE_TYPE) {
     NOTICE_CLOSE,               //关闭
     NOTICE_HOLD_ON,             //稍等
     NOTICE_SEND_MSG,            //发送求助
-    NOTICE_CANCEL_MSG           //取消帮助
+    NOTICE_CANCEL_MSG,          //取消帮助
+    NOTICE_SEACH_HELP,          //附近求助
 };
 
 /**
@@ -117,7 +123,8 @@ typedef NS_ENUM(NSInteger, TAG_NOTICE_TYPE) {
 #define SYSTEM_MESSAGE_TYPE      @"SYSTEM_MESSAGE_TYPE"
 
 typedef NS_ENUM(NSInteger, _TAG_SYSTEM_MESSAGE_TYPE) {
-    SYSTEM_MESSAGE_WAIT_HELP = 0           //等候帮助
+    SYSTEM_MESSAGE_WAIT_HELP = 0,           //等候帮助
+    SYSTEM_MESSAGE_SEACHED_HELP             //寻求帮助
 };
 
 #endif

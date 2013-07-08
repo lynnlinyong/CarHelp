@@ -91,6 +91,8 @@
 
 - (void) timeOut:(NSTimer *)theTimer
 {
+    CDLog(@"%s", __func__);
+    
     seconds -= 1;
     if (seconds == 0)
     {

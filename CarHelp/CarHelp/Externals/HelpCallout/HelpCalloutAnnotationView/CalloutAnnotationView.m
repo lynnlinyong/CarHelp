@@ -6,12 +6,12 @@
 //  Copyright (c) 2013年 lynn. All rights reserved.
 //
 
-#import "HelpCalloutAnnotationView.h"
+#import "CalloutAnnotationView.h"
 
 #define Arror_height 6
 
-@implementation HelpCalloutAnnotationView
-@synthesize helpCell;
+@implementation CalloutAnnotationView
+@synthesize callOutView;
 @synthesize contentView;
 
 - (id)initWithFrame:(CGRect)frame

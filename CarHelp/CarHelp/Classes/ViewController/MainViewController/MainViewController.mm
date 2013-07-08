@@ -178,6 +178,30 @@
     [_mapView selectAnnotation:ann animated:YES];
 }
 
+- (void) cleanNearbyHelpFrdAnnotation
+{
+    NSMutableDictionary *helpDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:HELP_SEARCH_MAP_TYPE],MAP_TYPE, nil];
+    NSMutableDictionary *helpCalloutDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:HELP_SEAECH_CALL_OUT_MAP_TYPE],MAP_TYPE, nil];
+    
+    NSArray* array = [NSArray arrayWithArray:_mapView.annotations];
+    for (id<BMKAnnotation> tmp in array)
+    {
+        id frdAnn = [self searchAnnotation:helpDic];
+        if (frdAnn)
+        {
+            [_mapView removeAnnotation:frdAnn];
+            frdAnn = nil;
+        }
+        
+        id frdCalloutAnn = [self searchAnnotation:helpCalloutDic];
+        if (frdCalloutAnn)
+        {
+            [_mapView removeAnnotation:frdCalloutAnn];
+            frdCalloutAnn = nil;
+        }
+    }
+}
+
 - (void) cleanAllAnnotation
 {
     dstAnn = nil;
@@ -202,6 +226,67 @@
     }
     
     return -1;
+}
+
+- (id) searchAnnotation:(NSMutableDictionary *) idDic
+{
+    NSArray *anns = [_mapView annotations];
+    for (id<BMKAnnotation> tmp in anns)
+    {
+        if ([tmp isKindOfClass:[CustomPointAnnotation class]])
+        {
+            NSNumber *dstType = [((CustomPointAnnotation *)tmp).idDic objectForKey:MAP_TYPE];
+            NSNumber *srcType = [idDic objectForKey:MAP_TYPE];
+            if ([srcType isEqualToNumber:dstType])
+            {
+                switch (srcType.intValue)
+                {
+                    case HELP_MAP_TYPE:                 //一键求助地图标注
+                    {
+                    }
+                    case HELP_CALL_OUT_MAP_TYPE:        //一键求助CallOut标注
+                    {
+                        return tmp;
+                    }
+                    case HELP_SEARCH_MAP_TYPE:          //附近求助地图标注
+                    {
+//                        break;
+                    }
+                    case HELP_SEAECH_CALL_OUT_MAP_TYPE: //附近求助CallOut标注
+                    {
+                        return tmp;
+                        break;
+                    }
+                    default:
+                        break;
+                }
+            }
+        }
+    }
+    
+    return nil;
+}
+
+- (void) cleanHelpAnnotation
+{
+    NSMutableDictionary *helpDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:HELP_MAP_TYPE],MAP_TYPE, nil];
+    NSMutableDictionary *helpCalloutDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:HELP_CALL_OUT_MAP_TYPE],MAP_TYPE, nil];
+    
+    id helpAnn = [self searchAnnotation:helpDic];
+    if (helpAnn)
+    {
+        [_mapView removeAnnotation:helpAnn];
+        helpAnn = nil;
+    }
+    
+    id helpCalloutAnn = [self searchAnnotation:helpCalloutDic];
+    if (helpCalloutAnn)
+    {
+        [_mapView removeAnnotation:helpCalloutAnn];
+        helpCalloutAnn = nil;
+    }
+    
+    _mapView.showsUserLocation = YES;
 }
 
 - (NSString*)getMyBundlePath1:(NSString *)filename
@@ -362,31 +447,49 @@
 #pragma mark - BMKMapViewDelegate
 - (void) mapView:(BMKMapView *)mapView didSelectAnnotationView:(BMKAnnotationView *)view
 {
-    BMKPointAnnotation *annn = (BMKPointAnnotation *)view.annotation;
-    if (meAnn == annn)
+    if ([view.annotation isKindOfClass:[CustomPointAnnotation class]])
     {
-        if (meCalloutAnn.coordinate.latitude == view.annotation.coordinate.latitude &&
-                    meCalloutAnn.coordinate.longitude == view.annotation.coordinate.longitude)
+        CustomPointAnnotation *annn = (CustomPointAnnotation *)view.annotation;
+        int mapType = ((NSNumber *)[annn.idDic objectForKey:MAP_TYPE]).intValue;
+        switch (mapType)
         {
-            return;
+            case HELP_MAP_TYPE:             //一键求助
+            {
+                NSMutableDictionary *tmpDic = [annn.idDic mutableCopy];
+                [tmpDic setObject:[NSNumber numberWithInt:HELP_CALL_OUT_MAP_TYPE]
+                           forKey:MAP_TYPE];
+                
+                //创建搭载自定义calloutview的annotation
+                CalloutAnnotation *meCalloutAnn = [[[CalloutAnnotation alloc] initWithLatitude:view.annotation.coordinate.latitude
+                                                                   andLongitude:view.annotation.coordinate.longitude] autorelease];
+                meCalloutAnn.idDic = [tmpDic mutableCopy];
+                [_mapView addAnnotation:meCalloutAnn];
+                [_mapView setCenterCoordinate:view.annotation.coordinate
+                                     animated:YES];
+                [tmpDic release];
+                return;
+                break;
+            }
+            case HELP_SEARCH_MAP_TYPE:     //附近求助
+            {
+                NSMutableDictionary *tmpDic = [annn.idDic mutableCopy];
+                [tmpDic setObject:[NSNumber numberWithInt:HELP_SEAECH_CALL_OUT_MAP_TYPE]
+                           forKey:MAP_TYPE];
+                
+                //创建搭载自定义calloutview的annotation
+                CalloutAnnotation *meCalloutAnn = [[[CalloutAnnotation alloc] initWithLatitude:view.annotation.coordinate.latitude
+                                                                                  andLongitude:view.annotation.coordinate.longitude] autorelease];
+                meCalloutAnn.idDic = [tmpDic mutableCopy];
+                [_mapView addAnnotation:meCalloutAnn];
+                [_mapView setCenterCoordinate:view.annotation.coordinate
+                                     animated:YES];
+                [tmpDic release];
+                return;
+                break;
+            }
+            default:
+                break;
         }
-        
-        //如果当前显示着calloutview，又触发了select方法，删除这个calloutview annotation
-        if (meCalloutAnn)
-        {
-            [_mapView removeAnnotation:meCalloutAnn];
-            meCalloutAnn = nil;
-        }
-        
-        //创建搭载自定义calloutview的annotation
-        meCalloutAnn = [[[HelpCalloutAnnotation alloc] initWithLatitude:view.annotation.coordinate.latitude
-                                                           andLongitude:view.annotation.coordinate.longitude] autorelease];  //把通过marker(ZNBCPointAnnotation)设置的pointCalloutInfo信息赋值给CalloutMapAnnotation
-        meCalloutAnn.locationInfo = [NSDictionary dictionaryWithObject:annn.title
-                                                                forKey:@"dstLoc"];
-        [_mapView addAnnotation:meCalloutAnn];
-        [_mapView setCenterCoordinate:view.annotation.coordinate
-                             animated:YES];
-        return;
     }
     
     if ([view.annotation isKindOfClass:[BMKPointAnnotation class]])
@@ -407,7 +510,7 @@
         //创建搭载自定义calloutview的annotation
         dstAnn = [[[DstCalloutAnnotation alloc] initWithLatitude:view.annotation.coordinate.latitude
                                                     andLongitude:view.annotation.coordinate.longitude] autorelease];  //把通过marker(ZNBCPointAnnotation)设置的pointCalloutInfo信息赋值给CalloutMapAnnotation
-        dstAnn.locationInfo = [NSDictionary dictionaryWithObject:annn.title
+        dstAnn.locationInfo = [NSDictionary dictionaryWithObject:view.annotation.title
                                                           forKey:@"dstLoc"];
         [_mapView addAnnotation:dstAnn];
         [_mapView setCenterCoordinate:view.annotation.coordinate
@@ -425,6 +528,41 @@
 //            dstAnn = nil;
 //        }
     }
+    
+    if ([view.annotation isKindOfClass:[CustomPointAnnotation class]])
+    {
+        CustomPointAnnotation *annn = (CustomPointAnnotation *)view.annotation;
+        int mapType = ((NSNumber *)[annn.idDic objectForKey:MAP_TYPE]).intValue;
+        switch (mapType)
+        {
+            case HELP_MAP_TYPE:             //一键求助
+            {
+                NSMutableDictionary *tmpDic = [annn.idDic mutableCopy];
+                [tmpDic setObject:[NSNumber numberWithInt:HELP_CALL_OUT_MAP_TYPE]
+                           forKey:MAP_TYPE];
+                id mapAnn = [self searchAnnotation:tmpDic];
+                if (mapAnn)
+                {
+                    [_mapView removeAnnotation:mapAnn];
+                    mapAnn = nil;
+                }
+                [tmpDic release];
+            }
+            case HELP_SEARCH_MAP_TYPE:      //附近求助
+            {
+                NSMutableDictionary *tmpDic = [annn.idDic mutableCopy];
+                [tmpDic setObject:[NSNumber numberWithInt:HELP_SEAECH_CALL_OUT_MAP_TYPE]
+                           forKey:MAP_TYPE];
+                id mapAnn = [self searchAnnotation:tmpDic];
+                if (mapAnn)
+                {
+                    [_mapView removeAnnotation:mapAnn];
+                    mapAnn = nil;
+                }
+                [tmpDic release];
+            }
+        }
+    }
 }
 
 - (BMKAnnotationView *)mapView:(BMKMapView *)mapView viewForAnnotation:(id <BMKAnnotation>)annotation
@@ -434,32 +572,110 @@
 		return [self getRouteAnnotationView:_mapView
                           viewForAnnotation:(RouteAnnotation*)annotation];
 	}
-    else if ([annotation isKindOfClass:[HelpCalloutAnnotation class]])
+    else if ([annotation isKindOfClass:[CustomPointAnnotation class]])
     {
-        //此时annotation就是我们calloutview的annotation
-        HelpCalloutAnnotation *ann = (HelpCalloutAnnotation *)annotation;  //如果可以重用
-        HelpCalloutAnnotationView *annView = (HelpCalloutAnnotationView *)[_mapView dequeueReusableAnnotationViewWithIdentifier:@"calloutview"];
-        //否则创建新的calloutView
-        if (!annView)
+        CustomPointAnnotation *ann = (CustomPointAnnotation *)annotation;
+        int mapType = ((NSNumber *)[ann.idDic objectForKey:MAP_TYPE]).intValue;
+        switch (mapType)
         {
-            annView = [[[HelpCalloutAnnotationView alloc] initWithAnnotation:annotation
-                                                             reuseIdentifier:@"calloutview"] autorelease];
-            HelpCell *cell = [[HelpCell alloc]initWithFrame:CGRectMake(0, 0, annView.contentView.frame.size.width, annView.contentView.frame.size.height)];
-            cell.delegate = self;
-            [annView.contentView addSubview:cell];
-            annView.helpCell = cell;
+            case HELP_MAP_TYPE:             //一键求助地图标注
+            {
+                BMKPinAnnotationView *newAnnotationView = [[BMKPinAnnotationView alloc] initWithAnnotation:annotation
+                                                                           reuseIdentifier:@"myAnnotation"];
+                newAnnotationView.pinColor       = BMKPinAnnotationColorRed;
+                newAnnotationView.animatesDrop   = YES; //设置该标注点动画显示
+                newAnnotationView.canShowCallout = NO;
+                return newAnnotationView;
+                break;
+            }
+            case HELP_CALL_OUT_MAP_TYPE:    //一键求助CallOut标注
+            {
+                //此时annotation就是我们calloutview的annotation
+                CalloutAnnotation *ann = (CalloutAnnotation *)annotation;  //如果可以重用
+                CalloutAnnotationView *annView = [[[CalloutAnnotationView alloc] initWithAnnotation:annotation
+                                                                                            reuseIdentifier:@"calloutview"] autorelease];
+                HelpCalloutCell *cell = [[HelpCalloutCell alloc]initWithFrame:CGRectMake(0, 0, annView.contentView.frame.size.width,
+                                                                           annView.contentView.frame.size.height)];
+                cell.idDic = ann.idDic;
+                cell.delegate = self;
+                [annView.contentView addSubview:cell];
+                annView.callOutView = cell;
+                
+                return annView;
+                break;
+            }
+            case HELP_SEARCH_MAP_TYPE:          //附近求助地图标注
+            {
+                BMKPinAnnotationView *newAnnotationView = [[BMKPinAnnotationView alloc] initWithAnnotation:annotation
+                                                                                           reuseIdentifier:@"myAnnotation"];
+                newAnnotationView.pinColor       = BMKPinAnnotationColorRed;
+                newAnnotationView.animatesDrop   = YES; //设置该标注点动画显示
+                newAnnotationView.canShowCallout = NO;
+                return newAnnotationView;
+                break;
+            }
+            case HELP_SEAECH_CALL_OUT_MAP_TYPE: //附近求助CallOut标注
+            {
+                //此时annotation就是我们calloutview的annotation
+                CalloutAnnotation *ann = (CalloutAnnotation *)annotation;  //如果可以重用
+                CalloutAnnotationView *annView = [[[CalloutAnnotationView alloc] initWithAnnotation:annotation
+                                                                                    reuseIdentifier:@"calloutview"] autorelease];
+                annView.frame = CGRectMake(0, 0, 240, 200);
+                annView.centerOffset = CGPointMake(0, -125);
+                annView.contentView.frame = CGRectMake(0, 0, 240, 200);
+                HelpFriendCell *cell = [[HelpFriendCell alloc]initWithFrame:CGRectMake(0, 0, annView.contentView.frame.size.width,
+                                                                                         annView.contentView.frame.size.height)];
+                cell.idDic = ann.idDic;
+//                cell.delegate = self;
+                [annView.contentView addSubview:cell];
+                annView.callOutView = cell;
+                
+                return annView;
+                break;
+            }
+            default:
+                break;
         }
-        return annView;
     }
-    else if (meAnn == annotation)
-    {
-        BMKPinAnnotationView *newAnnotationView = [[BMKPinAnnotationView alloc] initWithAnnotation:annotation
-                                                                                   reuseIdentifier:@"myAnnotation"];
-        newAnnotationView.pinColor       = BMKPinAnnotationColorRed;
-        newAnnotationView.animatesDrop   = YES; //设置该标注点动画显示
-        newAnnotationView.canShowCallout = NO;
-        return newAnnotationView;
-    }
+//    else if (meAnn == annotation)
+//    {
+//        BMKPinAnnotationView *newAnnotationView = [[BMKPinAnnotationView alloc] initWithAnnotation:annotation
+//                                                                                   reuseIdentifier:@"myAnnotation"];
+//        newAnnotationView.pinColor       = BMKPinAnnotationColorRed;
+//        newAnnotationView.animatesDrop   = YES; //设置该标注点动画显示
+//        newAnnotationView.canShowCallout = NO;
+//        return newAnnotationView;
+//    }
+//    else if ([annotation isKindOfClass:[HelpFriendCalloutAnnotation class]])
+//    {
+//        //此时annotation就是我们calloutview的annotation
+//        HelpFriendCalloutAnnotation *ann = (HelpFriendCalloutAnnotation *)annotation;  //如果可以重用
+//        HelpFriendAnnotationView *annView = [[[HelpFriendAnnotationView alloc] initWithAnnotation:annotation
+//                                                                                    reuseIdentifier:@"calloutview"] autorelease];
+//        HelpFriendCell *cell = [[HelpFriendCell alloc]initWithFrame:CGRectMake(0, 0, annView.contentView.frame.size.width,
+//                                                                   annView.contentView.frame.size.height)];
+////        cell.locationInfo = [ann.locationInfo copy];
+////        cell.delegate = self;
+//        [annView.contentView addSubview:cell];
+//        annView.helpFrdCell = cell;
+//        
+//        return annView;
+//    }
+//    else if ([annotation isKindOfClass:[HelpCalloutAnnotation class]])
+//    {
+//        //此时annotation就是我们calloutview的annotation
+//        HelpCalloutAnnotation *ann = (HelpCalloutAnnotation *)annotation;  //如果可以重用
+//        HelpCalloutAnnotationView *annView = [[[HelpCalloutAnnotationView alloc] initWithAnnotation:annotation
+//                                                                                    reuseIdentifier:@"calloutview"] autorelease];
+//        HelpCell *cell = [[HelpCell alloc]initWithFrame:CGRectMake(0, 0, annView.contentView.frame.size.width,
+//                                                                   annView.contentView.frame.size.height)];
+//        cell.locationInfo = [ann.locationInfo copy];
+//        cell.delegate = self;
+//        [annView.contentView addSubview:cell];
+//        annView.helpCell = cell;
+//        
+//        return annView;
+//    }
     else if ([annotation isKindOfClass:[BMKPointAnnotation class]])
     {
         CDLog(@"DST:%f,%f", [annotation coordinate].latitude,
@@ -752,10 +968,77 @@
 }
 
 #pragma mark -
-#pragma mark - HelpCellDelegate
-- (void) helpCell:(HelpCell *)cell ClickedIndex:(int)index
+#pragma mark - HelpFriendCellDelegate
+- (void) helpFriendCell:(HelpFriendCell *)cell index:(int)index
 {
-    CDLog(@"index:%d", index);
+    switch (index)
+    {
+        case 0:         //关闭
+        {
+            break;
+        }
+        case 1:         //查看助友详细资料
+        {
+            break;
+        }
+        case 2:         //请求助友帮助
+        {
+            break;
+        }
+        default:
+            break;
+    }
+}
+
+#pragma mark -
+#pragma mark - HelpCellDelegate
+- (void) helpCallOutCell:(HelpCalloutCell *)cell ClickedIndex:(int)index
+{
+    switch (index)
+    {
+        case 0:         //重新请求求助
+        {
+            //先取消当前请求
+            [self helpCallOutCell:cell ClickedIndex:2];
+            
+            //重新发送求助
+            NSDictionary *infoDic = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:NOTICE_SEND_MSG],
+                                     NOTICE_TYPE, nil];
+            [[NSNotificationCenter defaultCenter] postNotificationName:NOTICE_MSG
+                                                                object:nil
+                                                              userInfo:infoDic];
+            break;
+        }
+        case 1:         //求助详情
+        {
+            HelpContentViewController *hVc = [[HelpContentViewController alloc]init];
+            [self presentPopupViewController:hVc
+                               animationType:MJPopupViewAnimationFade];
+            break;
+        }
+        case 2:         //取消求助
+        {
+            NSDictionary *infoDic = cell.idDic;
+            if (infoDic)
+            {
+                int res = [self searchCell:[infoDic objectForKey:@"CURENT_TIME"]];
+                if (res >= 0)
+                {
+                    NoticeWaitTableViewCell *cell = (NoticeWaitTableViewCell *)[noticeTab cellForRowAtIndexPath:[NSIndexPath indexPathForRow:res inSection:0]];
+                    
+                    //取消帮助
+                    NSDictionary *infoDic = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:NOTICE_CANCEL_MSG],
+                                             NOTICE_TYPE,cell.idDic,@"ID_DIC", nil];
+                    [[NSNotificationCenter defaultCenter] postNotificationName:NOTICE_MSG
+                                                                        object:nil
+                                                                      userInfo:infoDic];
+                }
+            }
+            break;
+        }
+        default:
+            break;
+    }
 }
 
 #pragma mark -
@@ -837,13 +1120,22 @@
             sysStatus = SYSTEM_STATUS_WAIT_HELP;
             _mapView.showsUserLocation = NO;
             
-            NSDictionary *msgDic = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:SYSTEM_MESSAGE_WAIT_HELP],SYSTEM_MESSAGE_TYPE,dateString,@"CURENT_TIME", nil];
+            CDLog(@"dateString:%@", dateString);
+            //封装消息
+            NSMutableDictionary *msgDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                                        [NSNumber numberWithInt:SYSTEM_MESSAGE_WAIT_HELP],
+                                                        SYSTEM_MESSAGE_TYPE,
+                                                        [NSNumber numberWithInt:HELP_MAP_TYPE],
+                                                        MAP_TYPE,
+                                                        dateString,
+                                                        @"CURENT_TIME", nil];
             [noticeArray addObject:msgDic];
             [noticeTab reloadData];
             
-            meAnn = [[BMKPointAnnotation alloc]init];
+            CustomPointAnnotation *meAnn = [[CustomPointAnnotation alloc]init];
+            meAnn.idDic = msgDic;
+            meAnn.title = dateString;
             meAnn.coordinate = _mapView.userLocation.coordinate;
-            meAnn.title = @"开始";
             [_mapView addAnnotation:meAnn];
             
             [self dismissPopupViewControllerWithanimationType:MJPopupViewAnimationFade];
@@ -852,8 +1144,6 @@
         case NOTICE_CANCEL_MSG:   //取消一键求助
         {
             //删除NoticeCell
-            CDLog(@"NOTICE_CANCEL_MSG");
-            
             NSDictionary *idDic = [dic objectForKey:@"ID_DIC"];
             if (idDic)
             {
@@ -863,8 +1153,11 @@
                     sysStatus = SYSTEM_STATUS_NORMAL;
                     
                     //删除地图Annotation
-                    [_mapView removeAnnotation:meAnn];
-                    [_mapView removeAnnotation:meCalloutAnn];
+                    [self cleanHelpAnnotation];
+                    
+                    //停止计时
+                    NoticeWaitTableViewCell *cell = (NoticeWaitTableViewCell *)[noticeTab cellForRowAtIndexPath:[NSIndexPath indexPathForRow:res inSection:0]];
+                    [cell cancelWaitHelp];
                     
                     //删除数据源
                     [noticeArray removeObjectAtIndex:res];  //移除数据源的数据
@@ -876,10 +1169,84 @@
             
             break;
         }
-//        case 4:     //附近求助
-//        {
-//            break;
-//        }
+        case NOTICE_SEACH_HELP:     //附近求助
+        {
+            sysStatus = SYSTEM_STATUS_SEARCH_HELP;
+            
+            //封装消息
+            NSMutableDictionary *msgDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                           [NSNumber numberWithInt:SYSTEM_MESSAGE_SEACHED_HELP],
+                                           SYSTEM_MESSAGE_TYPE,
+                                           [NSNumber numberWithInt:HELP_SEARCH_MAP_TYPE],
+                                           MAP_TYPE,
+                                           dateString,
+                                           @"CURENT_TIME",nil];
+            [noticeArray addObject:msgDic];
+            [noticeTab reloadData];
+            
+            /**
+             * 显示助友地图标注
+             **/
+            double lat = _mapView.userLocation.coordinate.latitude;
+            double log = _mapView.userLocation.coordinate.longitude;
+            
+            Friend *frd   = [[Friend alloc]init];
+            frd.userName  = @"张三";
+            frd.accountId = @"1234567";
+            frd.goodSkills= @"加水";
+            frd.helpCount = 1;
+            frd.isFastFrd = NO;
+            frd.head  = @"boy_1";
+            frd.score = 500;
+            frd.honre = 10;
+            frd.packagePercent = 0.3;
+            
+            NSMutableDictionary *objDic = [msgDic mutableCopy];
+            [objDic setObject:frd forKey:@"USER"];
+            CustomPointAnnotation *cAnn =[[CustomPointAnnotation alloc]init];
+            cAnn.idDic = objDic;
+            cAnn.coordinate = CLLocationCoordinate2DMake(lat-0.003, log-0.002);
+            [_mapView addAnnotation:cAnn];
+            
+            Friend *frd1   = [[Friend alloc]init];
+            frd1.userName  = @"李四";
+            frd1.accountId = @"1234567";
+            frd1.goodSkills= @"加水";
+            frd1.helpCount = 1;
+            frd1.isFastFrd = NO;
+            frd1.head  = @"boy_1";
+            frd1.score = 500;
+            frd1.honre = 10;
+            frd1.packagePercent = 0.3;
+            
+            NSMutableDictionary *objDic1 = [msgDic mutableCopy];
+            [objDic1 setObject:frd1 forKey:@"USER"];
+            CustomPointAnnotation *cAnn1 =[[CustomPointAnnotation alloc]init];
+            cAnn1.idDic = objDic1;
+            cAnn1.coordinate = CLLocationCoordinate2DMake(lat+0.004, log+0.005);
+            [_mapView addAnnotation:cAnn1];
+            
+            Friend *frd2   = [[Friend alloc]init];
+            frd2.userName  = @"王五";
+            frd2.accountId = @"1234567";
+            frd2.goodSkills= @"加水";
+            frd2.helpCount = 1;
+            frd2.isFastFrd = NO;
+            frd2.head  = @"boy_1";
+            frd2.score = 500;
+            frd2.honre = 10;
+            frd2.packagePercent = 0.3;
+            
+            NSMutableDictionary *objDic2 = [msgDic mutableCopy];
+            [objDic2 setObject:frd2 forKey:@"USER"];
+            CustomPointAnnotation *cAnn2 =[[CustomPointAnnotation alloc]init];
+            cAnn2.idDic = objDic2;
+            cAnn2.coordinate = CLLocationCoordinate2DMake(lat+0.0035, log+0.002);
+            [_mapView addAnnotation:cAnn2];
+            
+            [self dismissPopupViewControllerWithanimationType:MJPopupViewAnimationFade];
+            break;
+        }
 //        case 5:     //泊车
 //        {
 //            break;
@@ -1011,7 +1378,7 @@
           cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {   
     NSDate *date = [NSDate date];
-    NSDictionary *msgDic = [noticeArray objectAtIndex:indexPath.row];
+    NSMutableDictionary *msgDic = [noticeArray objectAtIndex:indexPath.row];
     if (msgDic)
     {
         NSNumber *msgType = [msgDic objectForKey:SYSTEM_MESSAGE_TYPE];
@@ -1032,6 +1399,23 @@
                     cell.delegate = self;
                 }
         
+                return cell;
+                break;
+            }
+            case SYSTEM_MESSAGE_SEACHED_HELP:   //寻求帮助
+            {
+                NSString *idString = [((NSDictionary *)[noticeArray objectAtIndex:indexPath.row]) objectForKey:@"CURENT_TIME"];
+                SearchHelpCell *cell = [tableView dequeueReusableCellWithIdentifier:idString];
+                if (!cell)
+                {
+                    cell = [[[SearchHelpCell alloc]initWithStyle:UITableViewCellStyleDefault
+                                                 reuseIdentifier:idString]autorelease];
+                    cell.idDic = [[noticeArray objectAtIndex:indexPath.row] copy];
+                    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+                    [cell setBackGroupColor:[UIColor clearColor]];
+                    cell.delegate = self;
+                }
+                
                 return cell;
                 break;
             }
@@ -1080,13 +1464,22 @@
                              swipeTableViewCell.contentView.frame = CGRectOffset(swipeTableViewCell.contentView.bounds, swipeTableViewCell.contentView.frame.size.width, 0);
                          }
                          completion:^(BOOL finished) {
-                             //主动取消求助
-                             [((NoticeWaitTableViewCell *)swipeTableViewCell) cancelWaitHelp];
+                            
                              sysStatus = SYSTEM_STATUS_NORMAL;
                              
-                             //删除地图Annotation
-                             [_mapView removeAnnotation:meAnn];
-                             [_mapView removeAnnotation:meCalloutAnn];
+                             //主动取消求助
+                             if ([swipeTableViewCell isKindOfClass:[NoticeWaitTableViewCell class]])
+                             {
+                                 [((NoticeWaitTableViewCell *)swipeTableViewCell) cancelWaitHelp];
+                                 
+                                 //删除地图Annotation
+                                 [self cleanHelpAnnotation];
+                             }
+                             else if ([swipeTableViewCell isKindOfClass:[SearchHelpCell class]])
+                             {
+                                 //删除所有附件查找的助友Annotation
+                                 [self cleanNearbyHelpFrdAnnotation];
+                             }
                              
                              //删除Cell
                              [swipeTableViewCell.contentView setHidden:YES];

@@ -186,6 +186,12 @@
                 }
                 case 1:         //附近求助
                 {
+                    NSDictionary *infoDic = [NSDictionary dictionaryWithObjectsAndKeys:
+                                             [NSNumber numberWithInt:NOTICE_SEACH_HELP],
+                                             NOTICE_TYPE,nil];
+                    [[NSNotificationCenter defaultCenter] postNotificationName:NOTICE_MSG
+                                                                        object:nil
+                                                                      userInfo:infoDic];
                     break;
                 }
                 case 2:         //泊车

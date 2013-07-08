@@ -52,10 +52,14 @@
 		BA906E1B17757EC4004C62C4 /* RegistDriverLicenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA906E1A17757EC4004C62C4 /* RegistDriverLicenseViewController.m */; };
 		BA906E1E17758134004C62C4 /* RegistCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA906E1D17758132004C62C4 /* RegistCarViewController.m */; };
 		BA906E2117758147004C62C4 /* RegistUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA906E2017758146004C62C4 /* RegistUserViewController.m */; };
+		BA931D26178AA06600B1BEC6 /* HelpContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA931D25178AA06600B1BEC6 /* HelpContentViewController.m */; };
+		BA931D2A178AAE6D00B1BEC6 /* SearchHelpCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA931D29178AAE6D00B1BEC6 /* SearchHelpCell.m */; };
+		BA931D2D178AAFFC00B1BEC6 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = BA931D2C178AAFFC00B1BEC6 /* search.png */; };
+		BA931D3E178ABD8F00B1BEC6 /* CustomPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = BA931D3D178ABD8F00B1BEC6 /* CustomPointAnnotation.m */; };
 		BA934D6517892FDC000E46CA /* NoticeWaitTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA934D6317892FDC000E46CA /* NoticeWaitTableViewCell.m */; };
-		BA934D6C1789B4E9000E46CA /* HelpCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA934D6B1789B4E9000E46CA /* HelpCell.m */; };
-		BA934D6F1789B53F000E46CA /* HelpCalloutAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA934D6E1789B53F000E46CA /* HelpCalloutAnnotationView.m */; };
-		BA934D721789B56B000E46CA /* HelpCalloutAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = BA934D711789B56B000E46CA /* HelpCalloutAnnotation.m */; };
+		BA934D6C1789B4E9000E46CA /* HelpCalloutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA934D6B1789B4E9000E46CA /* HelpCalloutCell.m */; };
+		BA934D6F1789B53F000E46CA /* CalloutAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA934D6E1789B53F000E46CA /* CalloutAnnotationView.m */; };
+		BA934D721789B56B000E46CA /* CalloutAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = BA934D711789B56B000E46CA /* CalloutAnnotation.m */; };
 		BA94FAF117798C65006BDE14 /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = BA94FAF017798C65006BDE14 /* Friend.m */; };
 		BA94FAF417799C9F006BDE14 /* FriendDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA94FAF317799C9F006BDE14 /* FriendDetailViewController.m */; };
 		BA954589177B097C009ACA8A /* HelpDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA954588177B097B009ACA8A /* HelpDetailViewController.m */; };
@@ -191,6 +195,7 @@
 		BA9D5018178423A50006742C /* UISearchBarBookmarks@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA9D5014178423A50006742C /* UISearchBarBookmarks@2x.png */; };
 		BA9D5019178423A50006742C /* UISearchBarBookmarksPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = BA9D5015178423A50006742C /* UISearchBarBookmarksPressed.png */; };
 		BA9D501A178423A50006742C /* UISearchBarBookmarksPressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA9D5016178423A50006742C /* UISearchBarBookmarksPressed@2x.png */; };
+		BA9EC0BB178AF93900CF4BA1 /* HelpFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9EC0BA178AF93900CF4BA1 /* HelpFriendCell.m */; };
 		BAFCC9AD177EDFCD0046E0F0 /* pinyin.c in Sources */ = {isa = PBXBuildFile; fileRef = BAFCC9AC177EDFCD0046E0F0 /* pinyin.c */; };
 /* End PBXBuildFile section */
 
@@ -293,14 +298,21 @@
 		BA906E1D17758132004C62C4 /* RegistCarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistCarViewController.m; sourceTree = "<group>"; };
 		BA906E1F17758146004C62C4 /* RegistUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistUserViewController.h; sourceTree = "<group>"; };
 		BA906E2017758146004C62C4 /* RegistUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistUserViewController.m; sourceTree = "<group>"; };
+		BA931D24178AA06600B1BEC6 /* HelpContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpContentViewController.h; sourceTree = "<group>"; };
+		BA931D25178AA06600B1BEC6 /* HelpContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpContentViewController.m; sourceTree = "<group>"; };
+		BA931D28178AAE6D00B1BEC6 /* SearchHelpCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchHelpCell.h; sourceTree = "<group>"; };
+		BA931D29178AAE6D00B1BEC6 /* SearchHelpCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchHelpCell.m; sourceTree = "<group>"; };
+		BA931D2C178AAFFC00B1BEC6 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
+		BA931D3C178ABD8F00B1BEC6 /* CustomPointAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPointAnnotation.h; sourceTree = "<group>"; };
+		BA931D3D178ABD8F00B1BEC6 /* CustomPointAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPointAnnotation.m; sourceTree = "<group>"; };
 		BA934D6317892FDC000E46CA /* NoticeWaitTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticeWaitTableViewCell.m; sourceTree = "<group>"; };
 		BA934D6417892FDC000E46CA /* NoticeWaitTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticeWaitTableViewCell.h; sourceTree = "<group>"; };
-		BA934D6A1789B4E9000E46CA /* HelpCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpCell.h; sourceTree = "<group>"; };
-		BA934D6B1789B4E9000E46CA /* HelpCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpCell.m; sourceTree = "<group>"; };
-		BA934D6D1789B53F000E46CA /* HelpCalloutAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpCalloutAnnotationView.h; sourceTree = "<group>"; };
-		BA934D6E1789B53F000E46CA /* HelpCalloutAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpCalloutAnnotationView.m; sourceTree = "<group>"; };
-		BA934D701789B56B000E46CA /* HelpCalloutAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpCalloutAnnotation.h; sourceTree = "<group>"; };
-		BA934D711789B56B000E46CA /* HelpCalloutAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpCalloutAnnotation.m; sourceTree = "<group>"; };
+		BA934D6A1789B4E9000E46CA /* HelpCalloutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpCalloutCell.h; sourceTree = "<group>"; };
+		BA934D6B1789B4E9000E46CA /* HelpCalloutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpCalloutCell.m; sourceTree = "<group>"; };
+		BA934D6D1789B53F000E46CA /* CalloutAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalloutAnnotationView.h; sourceTree = "<group>"; };
+		BA934D6E1789B53F000E46CA /* CalloutAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalloutAnnotationView.m; sourceTree = "<group>"; };
+		BA934D701789B56B000E46CA /* CalloutAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalloutAnnotation.h; sourceTree = "<group>"; };
+		BA934D711789B56B000E46CA /* CalloutAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalloutAnnotation.m; sourceTree = "<group>"; };
 		BA94FAEF17798C65006BDE14 /* Friend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Friend.h; sourceTree = "<group>"; };
 		BA94FAF017798C65006BDE14 /* Friend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Friend.m; sourceTree = "<group>"; };
 		BA94FAF217799C9F006BDE14 /* FriendDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendDetailViewController.h; sourceTree = "<group>"; };
@@ -531,6 +543,8 @@
 		BA9D5014178423A50006742C /* UISearchBarBookmarks@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UISearchBarBookmarks@2x.png"; sourceTree = "<group>"; };
 		BA9D5015178423A50006742C /* UISearchBarBookmarksPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UISearchBarBookmarksPressed.png; sourceTree = "<group>"; };
 		BA9D5016178423A50006742C /* UISearchBarBookmarksPressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UISearchBarBookmarksPressed@2x.png"; sourceTree = "<group>"; };
+		BA9EC0B9178AF93900CF4BA1 /* HelpFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpFriendCell.h; sourceTree = "<group>"; };
+		BA9EC0BA178AF93900CF4BA1 /* HelpFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpFriendCell.m; sourceTree = "<group>"; };
 		BAFCC9AC177EDFCD0046E0F0 /* pinyin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pinyin.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -779,40 +793,73 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		BA934D661789B1BD000E46CA /* HelpCallout */ = {
+		BA931D27178AAD4D00B1BEC6 /* SearchHelpCell */ = {
 			isa = PBXGroup;
 			children = (
-				BA934D671789B3A5000E46CA /* HelpCell */,
-				BA934D681789B3A5000E46CA /* HelpCalloutAnnotationView */,
-				BA934D691789B3A5000E46CA /* HelpCalloutAnnotation */,
+				BA931D28178AAE6D00B1BEC6 /* SearchHelpCell.h */,
+				BA931D29178AAE6D00B1BEC6 /* SearchHelpCell.m */,
 			);
+			path = SearchHelpCell;
+			sourceTree = "<group>";
+		};
+		BA931D2B178AAFF000B1BEC6 /* SearchHelpCell */ = {
+			isa = PBXGroup;
+			children = (
+				BA931D2C178AAFFC00B1BEC6 /* search.png */,
+			);
+			path = SearchHelpCell;
+			sourceTree = "<group>";
+		};
+		BA931D3B178ABD5B00B1BEC6 /* CustomPointAnnotation */ = {
+			isa = PBXGroup;
+			children = (
+				BA931D3C178ABD8F00B1BEC6 /* CustomPointAnnotation.h */,
+				BA931D3D178ABD8F00B1BEC6 /* CustomPointAnnotation.m */,
+			);
+			name = CustomPointAnnotation;
+			path = ../HelpFriendCallout/CustomPointAnnotation;
+			sourceTree = "<group>";
+		};
+		BA934D661789B1BD000E46CA /* Callout */ = {
+			isa = PBXGroup;
+			children = (
+				BA934D691789B3A5000E46CA /* CalloutAnnotation */,
+				BA934D681789B3A5000E46CA /* CalloutAnnotationView */,
+				BA931D3B178ABD5B00B1BEC6 /* CustomPointAnnotation */,
+				BA934D671789B3A5000E46CA /* HelpCalloutCell */,
+				BA9EC0B8178AF91F00CF4BA1 /* HelpFriendCell */,
+			);
+			name = Callout;
 			path = HelpCallout;
 			sourceTree = "<group>";
 		};
-		BA934D671789B3A5000E46CA /* HelpCell */ = {
+		BA934D671789B3A5000E46CA /* HelpCalloutCell */ = {
 			isa = PBXGroup;
 			children = (
-				BA934D6A1789B4E9000E46CA /* HelpCell.h */,
-				BA934D6B1789B4E9000E46CA /* HelpCell.m */,
+				BA934D6A1789B4E9000E46CA /* HelpCalloutCell.h */,
+				BA934D6B1789B4E9000E46CA /* HelpCalloutCell.m */,
 			);
+			name = HelpCalloutCell;
 			path = HelpCell;
 			sourceTree = "<group>";
 		};
-		BA934D681789B3A5000E46CA /* HelpCalloutAnnotationView */ = {
+		BA934D681789B3A5000E46CA /* CalloutAnnotationView */ = {
 			isa = PBXGroup;
 			children = (
-				BA934D6D1789B53F000E46CA /* HelpCalloutAnnotationView.h */,
-				BA934D6E1789B53F000E46CA /* HelpCalloutAnnotationView.m */,
+				BA934D6D1789B53F000E46CA /* CalloutAnnotationView.h */,
+				BA934D6E1789B53F000E46CA /* CalloutAnnotationView.m */,
 			);
+			name = CalloutAnnotationView;
 			path = HelpCalloutAnnotationView;
 			sourceTree = "<group>";
 		};
-		BA934D691789B3A5000E46CA /* HelpCalloutAnnotation */ = {
+		BA934D691789B3A5000E46CA /* CalloutAnnotation */ = {
 			isa = PBXGroup;
 			children = (
-				BA934D701789B56B000E46CA /* HelpCalloutAnnotation.h */,
-				BA934D711789B56B000E46CA /* HelpCalloutAnnotation.m */,
+				BA934D701789B56B000E46CA /* CalloutAnnotation.h */,
+				BA934D711789B56B000E46CA /* CalloutAnnotation.m */,
 			);
+			name = CalloutAnnotation;
 			path = HelpCalloutAnnotation;
 			sourceTree = "<group>";
 		};
@@ -1215,7 +1262,7 @@
 				BA9AA0C11773394400087953 /* DDMenuController */,
 				BA9AA0AA1773109500087953 /* Debug */,
 				BA9740DE1784A0B7003D223B /* DstCallout */,
-				BA934D661789B1BD000E46CA /* HelpCallout */,
+				BA934D661789B1BD000E46CA /* Callout */,
 				BA9CC14017881C6E00C10D39 /* LBorderView */,
 				BA105E661786A2250014BBB2 /* MJPopup */,
 				BA9D5004178420E30006742C /* NiftySearchView */,
@@ -1328,6 +1375,8 @@
 				BA10909717784E7100A1B657 /* UserBoardView.m */,
 				BA105E971786D4450014BBB2 /* SearchHelpMessageViewController.h */,
 				BA105E981786D4470014BBB2 /* SearchHelpMessageViewController.m */,
+				BA931D24178AA06600B1BEC6 /* HelpContentViewController.h */,
+				BA931D25178AA06600B1BEC6 /* HelpContentViewController.m */,
 			);
 			path = MainViewController;
 			sourceTree = "<group>";
@@ -1394,6 +1443,7 @@
 		BA9CC14817881E4400C10D39 /* NoticeView */ = {
 			isa = PBXGroup;
 			children = (
+				BA931D27178AAD4D00B1BEC6 /* SearchHelpCell */,
 				BA9CC14917881E7200C10D39 /* NoticeWaitCell */,
 			);
 			path = NoticeView;
@@ -1431,6 +1481,7 @@
 		BA9D5011178423A50006742C /* MainView */ = {
 			isa = PBXGroup;
 			children = (
+				BA931D2B178AAFF000B1BEC6 /* SearchHelpCell */,
 				BA9CC14D17884F3500C10D39 /* RMSwipeTableViewCell */,
 				BA9D5012178423A50006742C /* NiftySearchView */,
 			);
@@ -1446,6 +1497,15 @@
 				BA9D5016178423A50006742C /* UISearchBarBookmarksPressed@2x.png */,
 			);
 			path = NiftySearchView;
+			sourceTree = "<group>";
+		};
+		BA9EC0B8178AF91F00CF4BA1 /* HelpFriendCell */ = {
+			isa = PBXGroup;
+			children = (
+				BA9EC0B9178AF93900CF4BA1 /* HelpFriendCell.h */,
+				BA9EC0BA178AF93900CF4BA1 /* HelpFriendCell.m */,
+			);
+			path = HelpFriendCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1578,6 +1638,7 @@
 				BA9CC15317884F3500C10D39 /* DeleteGrey@2x.png in Resources */,
 				BA9CC15417884F3500C10D39 /* DeleteRed.png in Resources */,
 				BA9CC15517884F3500C10D39 /* DeleteRed@2x.png in Resources */,
+				BA931D2D178AAFFC00B1BEC6 /* search.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1676,9 +1737,13 @@
 				BA9CC14317881C6E00C10D39 /* LBorderView.m in Sources */,
 				BA9CC14717881D7D00C10D39 /* RMSwipeTableViewCell.m in Sources */,
 				BA934D6517892FDC000E46CA /* NoticeWaitTableViewCell.m in Sources */,
-				BA934D6C1789B4E9000E46CA /* HelpCell.m in Sources */,
-				BA934D6F1789B53F000E46CA /* HelpCalloutAnnotationView.m in Sources */,
-				BA934D721789B56B000E46CA /* HelpCalloutAnnotation.m in Sources */,
+				BA934D6C1789B4E9000E46CA /* HelpCalloutCell.m in Sources */,
+				BA934D6F1789B53F000E46CA /* CalloutAnnotationView.m in Sources */,
+				BA934D721789B56B000E46CA /* CalloutAnnotation.m in Sources */,
+				BA931D26178AA06600B1BEC6 /* HelpContentViewController.m in Sources */,
+				BA931D2A178AAE6D00B1BEC6 /* SearchHelpCell.m in Sources */,
+				BA931D3E178ABD8F00B1BEC6 /* CustomPointAnnotation.m in Sources */,
+				BA9EC0BB178AF93900CF4BA1 /* HelpFriendCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

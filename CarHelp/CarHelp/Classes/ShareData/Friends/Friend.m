@@ -18,6 +18,8 @@
 @synthesize helpCount;
 @synthesize goodSkills;
 @synthesize packagePercent;
+@synthesize carNumber;
+@synthesize drvExp;
 
 - (id) init
 {
@@ -28,9 +30,11 @@
         userName   = [[NSString alloc]init];
         accountId  = [[NSString alloc]init];
         goodSkills = [[NSString alloc]init];
+        carNumber  = [[NSString alloc]init];
         
-        score = 0;
-        honre = 0;
+        drvExp = 0;
+        score  = 0;
+        honre  = 0;
         isFastFrd = NO;
         helpCount = 0;
         packagePercent = 0.0;
@@ -45,6 +49,7 @@
     [userName   release];
     [accountId  release];
     [goodSkills release];
+    [carNumber  release];
     [super dealloc];
 }
 
@@ -53,16 +58,18 @@
     Friend *obj = NSCopyObject(self, 0, zone);
     if (obj)
     {
-        head = [[NSString alloc]init];
-        userName   = [[NSString alloc]init];
-        accountId  = [[NSString alloc]init];
-        goodSkills = [[NSString alloc]init];
+        head = [obj.head copy];
+        userName   = [obj.userName copy];
+        accountId  = [obj.accountId copy];
+        goodSkills = [obj.goodSkills copy];
+        carNumber  = [obj.carNumber copy];
         
-        score = 0;
-        honre = 0;
-        isFastFrd = NO;
-        helpCount = 0;
-        packagePercent = 0.0;
+        drvExp = obj.drvExp;
+        score  = obj.score;
+        honre  = obj.honre;
+        isFastFrd = obj.isFastFrd;
+        helpCount = obj.helpCount;
+        packagePercent = obj.packagePercent;
     }
     
     return obj;
@@ -73,16 +80,18 @@
     Friend *obj = NSCopyObject(self, 0, zone);
     if (obj)
     {
-        head = [[NSString alloc]init];
-        userName   = [[NSString alloc]init];
-        accountId  = [[NSString alloc]init];
-        goodSkills = [[NSString alloc]init];
+        head = [obj.head copy];
+        userName   = [obj.userName   copy];
+        accountId  = [obj.accountId  copy];
+        goodSkills = [obj.goodSkills copy];
+        carNumber  = [obj.carNumber  copy];
         
-        score = 0;
-        honre = 0;
-        isFastFrd = NO;
-        helpCount = 0;
-        packagePercent = 0.0;
+        drvExp = obj.drvExp;
+        score  = obj.score;
+        honre  = obj.honre;
+        isFastFrd = obj.isFastFrd;
+        helpCount = obj.helpCount;
+        packagePercent = obj.packagePercent;
     }
     
     return obj;

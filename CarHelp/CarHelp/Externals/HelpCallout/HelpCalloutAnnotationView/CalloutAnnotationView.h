@@ -8,7 +8,7 @@
 
 #import "BMKAnnotationView.h"
 
-@interface HelpCalloutAnnotationView : BMKAnnotationView
-@property (nonatomic, retain) HelpCell *helpCell;
+@interface CalloutAnnotationView : BMKAnnotationView
+@property (nonatomic, retain) id callOutView;
 @property (nonatomic, retain) UIView   *contentView;
 @end

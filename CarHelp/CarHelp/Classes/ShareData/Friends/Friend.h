@@ -20,6 +20,8 @@
     float           packagePercent; //装备完善度
     BOOL            isFastFrd;      //是否是密友
     
+    long            drvExp;         //驾龄
+    NSString        *carNumber;     //车牌号
     /**
      *缺少活跃度
      **/
@@ -33,4 +35,6 @@
 @property (nonatomic, assign) long helpCount;
 @property (nonatomic, assign) float packagePercent;
 @property (nonatomic, assign) BOOL isFastFrd;
+@property (nonatomic, assign) long drvExp;
+@property (nonatomic, retain) NSString *carNumber;
 @end

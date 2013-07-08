@@ -6,12 +6,11 @@
 //  Copyright (c) 2013年 lynn. All rights reserved.
 //
 
-#import "HelpCalloutAnnotation.h"
+#import "CalloutAnnotation.h"
 
-@implementation HelpCalloutAnnotation
+@implementation CalloutAnnotation
 @synthesize latitude;
 @synthesize longitude;
-@synthesize locationInfo;
 
 - (id)initWithLatitude:(CLLocationDegrees)lat
           andLongitude:(CLLocationDegrees)lon

@@ -6,10 +6,11 @@
 //  Copyright (c) 2013年 lynn. All rights reserved.
 //
 
-#import "HelpCell.h"
+#import "HelpCalloutCell.h"
 
-@implementation HelpCell
+@implementation HelpCalloutCell
 @synthesize delegate;
+@synthesize idDic;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -48,6 +49,12 @@
     return self;
 }
 
+- (void) dealloc
+{
+    [idDic release];
+    [super dealloc];
+}
+
 #pragma mark -
 #pragma mark - UIButton Clicked Action
 - (void) doButtonClicked:(id)sender
@@ -57,7 +64,7 @@
     {
         if ([delegate respondsToSelector:@selector(CellView:ClickedIndex:)])
         {
-            [delegate helpCell:self ClickedIndex:button.tag];
+            [delegate helpCallOutCell:self ClickedIndex:button.tag];
         }
     }
 }

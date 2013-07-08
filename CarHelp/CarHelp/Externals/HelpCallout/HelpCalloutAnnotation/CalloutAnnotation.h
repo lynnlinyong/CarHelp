@@ -8,10 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface HelpCalloutAnnotation : NSObject<BMKAnnotation>
+@interface CalloutAnnotation : CustomPointAnnotation
 @property (nonatomic) CLLocationDegrees latitude;
 @property (nonatomic) CLLocationDegrees longitude;
-@property (retain,nonatomic) NSDictionary *locationInfo;//callout吹出框要显示的各信息
-
 - (id)initWithLatitude:(CLLocationDegrees)lat andLongitude:(CLLocationDegrees)lon;
 @end

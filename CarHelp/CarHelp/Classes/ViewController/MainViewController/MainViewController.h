@@ -13,15 +13,35 @@
  * 系统状态
  **/
 typedef enum _TAG_SYSTEM_STATUS{
-    SYSTEM_STATUS_NORMAL = 0,      //救助者状态
-    SYSTEM_STATUS_WAIT_HELP        //求助者,一键求助
+    SYSTEM_STATUS_NORMAL = 0,       //救助者状态
+    SYSTEM_STATUS_WAIT_HELP,        //求助者,一键求助
+    SYSTEM_STATUS_SEARCH_HELP       //附近求助
 }SYSTEM_STATUS;
+
+/**
+ * 地图Annotation类型
+ **/
+#define MAP_TYPE        @"MAP_TYPE"
+typedef enum _TAG_MAP_TYPE{
+    /**
+     * 一键求助
+     **/
+    HELP_MAP_TYPE = 0,                  //一键求助
+    HELP_CALL_OUT_MAP_TYPE,         //一键求助CallOut类型
+    
+    /**
+     * 附近求助
+     **/
+    HELP_SEARCH_MAP_TYPE,           //附近求助
+    HELP_SEAECH_CALL_OUT_MAP_TYPE   //附近求助CallOut类型
+}MAP_ANNOTATION_TYPE;
 
 @interface MainViewController : UIViewController<
                                                 BMKSearchDelegate,
                                                 BMKMapViewDelegate,
                                                 DstPointCellDelegate,
-                                                HelpCellDelegate,
+                                                HelpCalloutCellDelegate,
+                                                HelpFriendCellDelegate,
                                                 DstNoticeDelegate,
                                                 UITableViewDelegate,
                                                 UITableViewDataSource,
@@ -44,8 +64,14 @@ typedef enum _TAG_SYSTEM_STATUS{
     /**
      * 发起求助
      **/
-    BMKPointAnnotation    *meAnn;
-    HelpCalloutAnnotation *meCalloutAnn;
+//    BMKPointAnnotation    *meAnn;
+//    CustomPointAnnotation   *meAnn;
+//    HelpCalloutAnnotation   *meCalloutAnn;
+    
+    /**
+     * 附近求助
+     **/
+//    HelpFriendCalloutAnnotation    *frdAnn;
     
     /**
      * 系统状态
