@@ -14,7 +14,7 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        groupView = [[LBorderView alloc]initWithFrame:CGRectMake(10, 5, 300, 50)];
+        groupView = [[LBorderView alloc]initWithFrame:CGRectMake(10, 5, 300, 45)];
         groupView.borderType   = BorderTypeDashed;
         groupView.dashPattern  = 8;
         groupView.spacePattern = 8;

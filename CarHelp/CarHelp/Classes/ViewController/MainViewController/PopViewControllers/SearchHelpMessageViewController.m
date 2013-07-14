@@ -13,6 +13,7 @@
 
 @implementation SearchHelpMessageViewController
 @synthesize titleStr;
+@synthesize helpType;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -43,6 +44,53 @@
 #pragma mark - Custom Action
 - (void) initUI
 {
+    //设置主题
+    switch (helpType)
+    {
+        case HELP_ON_KEY:
+        {
+            titleStr = @"一键求助";
+            break;
+        }
+        case HELP_STOP_CAR:
+        {
+            titleStr = @"泊车";
+            break;
+        }
+        case HELP_WATER:
+        {
+            titleStr = @"加水";
+            break;
+        }
+        case HELP_TRAUMA_DRESS:
+        {
+            titleStr = @"外伤包扎";
+            break;
+        }
+        case HELP_CASUALTY_SALVATION:
+        {
+            titleStr = @"伤亡救助";
+            break;
+        }
+        case HELP_TYRE:
+        {
+            titleStr = @"补胎";
+            break;
+        }
+        case HELP_OIL_FEED:
+        {
+            titleStr = @"给油";
+            break;
+        }
+        case HELP_OVER_CURRENT:
+        {
+            titleStr = @"过电";
+            break;
+        }
+        default:
+            break;
+    }
+    
     self.view.frame = [UIView fitCGRect:CGRectMake(0, 0, 280, 300)];
     self.view.backgroundColor = [UIColor whiteColor];
     
@@ -162,8 +210,10 @@
         }
         case 5:     //发起求助
         {
-            NSDictionary *infoDic = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:NOTICE_SEND_MSG],
-                                                                               NOTICE_TYPE, nil]; 
+            NSDictionary *infoDic = [NSDictionary dictionaryWithObjectsAndKeys:
+                                     [NSNumber numberWithInt:NOTICE_SEND_MSG], NOTICE_TYPE,
+                                     [NSNumber numberWithInt:helpType], HELP_TYPE,
+                                     titleStr,@"HELP_CONTENT", nil];
             [[NSNotificationCenter defaultCenter] postNotificationName:NOTICE_MSG
                                                                 object:nil
                                                               userInfo:infoDic];

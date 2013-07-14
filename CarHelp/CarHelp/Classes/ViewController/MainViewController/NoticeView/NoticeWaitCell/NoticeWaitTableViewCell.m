@@ -34,7 +34,7 @@
 //		[self.profileImageView.layer setBorderWidth:1];
 //        [self.profileImageView.layer setCornerRadius:2];
 //        [self.contentView addSubview:self.profileImageView];
-        groupView = [[LBorderView alloc]initWithFrame:CGRectMake(10, 5, 300, 50)];
+        groupView = [[LBorderView alloc]initWithFrame:CGRectMake(10, 5, 300, 45)];
         groupView.borderType = BorderTypeDashed;
         groupView.dashPattern = 8;
         groupView.spacePattern = 8;

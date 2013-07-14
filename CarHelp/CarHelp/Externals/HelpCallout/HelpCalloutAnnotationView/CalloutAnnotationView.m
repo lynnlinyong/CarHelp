@@ -13,6 +13,7 @@
 @implementation CalloutAnnotationView
 @synthesize callOutView;
 @synthesize contentView;
+@synthesize backColor;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -23,16 +24,27 @@
     return self;
 }
 
+- (void) dealloc
+{
+    [backColor release];
+    [super dealloc];
+}
+
 -(id)initWithAnnotation:(id<BMKAnnotation>)annotation
         reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithAnnotation:annotation reuseIdentifier:reuseIdentifier];
     if (self)
     {
+        backColor = [[UIColor alloc] initWithRed:255.0/255.0
+                                           green:255.0/255.0
+                                            blue:255.0/255.0
+                                           alpha:1.0];
         self.backgroundColor = [UIColor clearColor];
         self.canShowCallout  = NO;
         self.centerOffset    = CGPointMake(0, -55);
         self.frame = CGRectMake(0, 0, 240, 60);
+        
         UIView *_contentView = [[UIView alloc] initWithFrame:CGRectMake(5, 5, self.frame.size.width-10, self.frame.size.height-15)];
         _contentView.backgroundColor = [UIColor clearColor];
         [self addSubview:_contentView];
@@ -53,7 +65,7 @@
 -(void)drawInContext:(CGContextRef)context
 {
     CGContextSetLineWidth(context, 2.0);
-    CGContextSetFillColorWithColor(context, [UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1.0].CGColor);
+    CGContextSetFillColorWithColor(context, backColor.CGColor);
     [self getDrawPath:context];
     CGContextFillPath(context);
 }

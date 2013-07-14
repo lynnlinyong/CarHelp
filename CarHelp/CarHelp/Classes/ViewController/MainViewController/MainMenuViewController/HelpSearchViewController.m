@@ -175,14 +175,32 @@
             {
                 case 0:         //扫描求助
                 {
+                    NSDictionary *infoDic = [NSDictionary dictionaryWithObjectsAndKeys:
+                                             [NSNumber numberWithInt:NOTICE_SEARCH_HELP_TYPE],
+                                             NOTICE_TYPE,nil];
+                    [[NSNotificationCenter defaultCenter] postNotificationName:NOTICE_MSG
+                                                                        object:nil
+                                                                      userInfo:infoDic];
                     break;
                 }
                 case 1:         //助团出游
                 {
+                    NSDictionary *infoDic = [NSDictionary dictionaryWithObjectsAndKeys:
+                                             [NSNumber numberWithInt:NOTICE_TEAM_JOURNEY],
+                                             NOTICE_TYPE,nil];
+                    [[NSNotificationCenter defaultCenter] postNotificationName:NOTICE_MSG
+                                                                        object:nil
+                                                                      userInfo:infoDic];
                     break;
                 }
                 case 2:         //位置分享
                 {
+                    NSDictionary *infoDic = [NSDictionary dictionaryWithObjectsAndKeys:
+                                             [NSNumber numberWithInt:NOTICE_POSTATION_SHARE],
+                                             NOTICE_TYPE,nil];
+                    [[NSNotificationCenter defaultCenter] postNotificationName:NOTICE_MSG
+                                                                        object:nil
+                                                                      userInfo:infoDic];
                     break;
                 }
                 default:
@@ -196,14 +214,32 @@
             {
                 case 0:         //导引
                 {
+                    NSDictionary *infoDic = [NSDictionary dictionaryWithObjectsAndKeys:
+                                             [NSNumber numberWithInt:NOTICE_LEAD],
+                                             NOTICE_TYPE,nil];
+                    [[NSNotificationCenter defaultCenter] postNotificationName:NOTICE_MSG
+                                                                        object:nil
+                                                                      userInfo:infoDic];
                     break;
                 }
                 case 1:         //隐身
                 {
+                    NSDictionary *infoDic = [NSDictionary dictionaryWithObjectsAndKeys:
+                                             [NSNumber numberWithInt:NOTICE_INVISIBLE],
+                                             NOTICE_TYPE,nil];
+                    [[NSNotificationCenter defaultCenter] postNotificationName:NOTICE_MSG
+                                                                        object:nil
+                                                                      userInfo:infoDic];
                     break;
                 }
                 case 2:         //勿扰模式
                 {
+                    NSDictionary *infoDic = [NSDictionary dictionaryWithObjectsAndKeys:
+                                             [NSNumber numberWithInt:NOTICE_DISTURB],
+                                             NOTICE_TYPE,nil];
+                    [[NSNotificationCenter defaultCenter] postNotificationName:NOTICE_MSG
+                                                                        object:nil
+                                                                      userInfo:infoDic];
                     break;
                 }
                 default:
@@ -217,10 +253,22 @@
             {
                 case 0:         //对话
                 {
+                    NSDictionary *infoDic = [NSDictionary dictionaryWithObjectsAndKeys:
+                                             [NSNumber numberWithInt:NOTICE_GOTO_CHAT],
+                                             NOTICE_TYPE,nil];
+                    [[NSNotificationCenter defaultCenter] postNotificationName:NOTICE_MSG
+                                                                        object:nil
+                                                                      userInfo:infoDic];
                     break;
                 }
                 case 1:         //好友列表
                 {
+                    NSDictionary *infoDic = [NSDictionary dictionaryWithObjectsAndKeys:
+                                             [NSNumber numberWithInt:NOTICE_GOTO_FRIEND_LIST],
+                                             NOTICE_TYPE,nil];
+                    [[NSNotificationCenter defaultCenter] postNotificationName:NOTICE_MSG
+                                                                        object:nil
+                                                                      userInfo:infoDic];
                     break;
                 }
                 case 2:         

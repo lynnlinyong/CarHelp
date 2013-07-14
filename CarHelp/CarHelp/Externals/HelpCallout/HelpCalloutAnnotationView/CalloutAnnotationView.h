@@ -9,6 +9,7 @@
 #import "BMKAnnotationView.h"
 
 @interface CalloutAnnotationView : BMKAnnotationView
+@property (nonatomic, retain) UIColor *backColor;
 @property (nonatomic, retain) id callOutView;
 @property (nonatomic, retain) UIView   *contentView;
 @end

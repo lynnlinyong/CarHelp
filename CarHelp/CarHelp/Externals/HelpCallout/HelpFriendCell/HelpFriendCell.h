@@ -23,6 +23,8 @@
     UILabel *drvExpLab;
     UILabel *skillLab;
     UILabel *recommendLab;
+    
+    CircularTimer *circularTimer;
 }
 @property (nonatomic, retain) NSMutableDictionary *idDic;
 @property (nonatomic, assign) id<HelpFriendCellDelegate> delegate;

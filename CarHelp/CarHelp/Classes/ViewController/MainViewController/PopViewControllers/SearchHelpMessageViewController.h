@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+
+
 @interface SearchHelpMessageViewController : UIViewController
+
+@property (nonatomic, assign) int helpType;
 @property (nonatomic, retain) NSString *titleStr;
 @end

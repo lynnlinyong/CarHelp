@@ -99,15 +99,12 @@
 #pragma mark - UIButton Clicked Action
 - (void) doButtonClicked:(id) sender
 {
-    UIButton *button = (UIButton *)sender;
-    switch (button.tag)
+    UIButton *button = (UIButton *)sender;    
+    if (delegate)
     {
-        if (delegate)
+        if ([delegate respondsToSelector:@selector(helpFriendCell:index:)])
         {
-            if ([delegate respondsToSelector:@selector(helpFriendCell:index:)])
-            {
-                [delegate helpFriendCell:self index:button.tag];
-            }
+            [delegate helpFriendCell:self index:button.tag];
         }
     }
 }

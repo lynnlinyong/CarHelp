@@ -170,7 +170,7 @@
 {
 	switch (rowIndex)
     {
-        case 0:
+        case 0:         
         {
             switch (colIndex)
             {
@@ -187,7 +187,7 @@
                 case 1:         //附近求助
                 {
                     NSDictionary *infoDic = [NSDictionary dictionaryWithObjectsAndKeys:
-                                             [NSNumber numberWithInt:NOTICE_SEACH_HELP],
+                                             [NSNumber numberWithInt:NOTICE_NEARBY_HELP],
                                              NOTICE_TYPE,nil];
                     [[NSNotificationCenter defaultCenter] postNotificationName:NOTICE_MSG
                                                                         object:nil
@@ -196,6 +196,13 @@
                 }
                 case 2:         //泊车
                 {
+                    NSDictionary *infoDic = [NSDictionary dictionaryWithObjectsAndKeys:
+                                             [NSNumber numberWithInt:NOTICE_HELP_TYPE],
+                                             NOTICE_TYPE,[NSNumber numberWithInt:HELP_STOP_CAR],
+                                             HELP_TYPE,nil];
+                    [[NSNotificationCenter defaultCenter] postNotificationName:NOTICE_MSG
+                                                                        object:nil
+                                                                      userInfo:infoDic];
                     break;
                 }
                 default:
@@ -209,14 +216,35 @@
             {
                 case 0:         //加水
                 {
+                    NSDictionary *infoDic = [NSDictionary dictionaryWithObjectsAndKeys:
+                                             [NSNumber numberWithInt:NOTICE_HELP_TYPE],
+                                             NOTICE_TYPE,[NSNumber numberWithInt:HELP_WATER],
+                                             HELP_TYPE,nil];
+                    [[NSNotificationCenter defaultCenter] postNotificationName:NOTICE_MSG
+                                                                        object:nil
+                                                                      userInfo:infoDic];
                     break;
                 }
                 case 1:         //外伤包扎
                 {
+                    NSDictionary *infoDic = [NSDictionary dictionaryWithObjectsAndKeys:
+                                             [NSNumber numberWithInt:NOTICE_HELP_TYPE],
+                                             NOTICE_TYPE,[NSNumber numberWithInt:HELP_TRAUMA_DRESS],
+                                             HELP_TYPE,nil];
+                    [[NSNotificationCenter defaultCenter] postNotificationName:NOTICE_MSG
+                                                                        object:nil
+                                                                      userInfo:infoDic];
                     break;
                 }
                 case 2:         //伤亡求助
                 {
+                    NSDictionary *infoDic = [NSDictionary dictionaryWithObjectsAndKeys:
+                                             [NSNumber numberWithInt:NOTICE_HELP_TYPE],
+                                             NOTICE_TYPE,[NSNumber numberWithInt:HELP_CASUALTY_SALVATION],
+                                             HELP_TYPE,nil];
+                    [[NSNotificationCenter defaultCenter] postNotificationName:NOTICE_MSG
+                                                                        object:nil
+                                                                      userInfo:infoDic];
                     break;
                 }
                 default:
@@ -230,14 +258,35 @@
             {
                 case 0:         //补胎
                 {
+                    NSDictionary *infoDic = [NSDictionary dictionaryWithObjectsAndKeys:
+                                             [NSNumber numberWithInt:NOTICE_HELP_TYPE],
+                                             NOTICE_TYPE,[NSNumber numberWithInt:HELP_TYRE],
+                                             HELP_TYPE,nil];
+                    [[NSNotificationCenter defaultCenter] postNotificationName:NOTICE_MSG
+                                                                        object:nil
+                                                                      userInfo:infoDic];
                     break;
                 }
                 case 1:         //给油
                 {
+                    NSDictionary *infoDic = [NSDictionary dictionaryWithObjectsAndKeys:
+                                             [NSNumber numberWithInt:NOTICE_HELP_TYPE],
+                                             NOTICE_TYPE,[NSNumber numberWithInt:HELP_OIL_FEED],
+                                             HELP_TYPE,nil];
+                    [[NSNotificationCenter defaultCenter] postNotificationName:NOTICE_MSG
+                                                                        object:nil
+                                                                      userInfo:infoDic];
                     break;
                 }
                 case 2:         //过电
                 {
+                    NSDictionary *infoDic = [NSDictionary dictionaryWithObjectsAndKeys:
+                                             [NSNumber numberWithInt:NOTICE_HELP_TYPE],
+                                             NOTICE_TYPE,[NSNumber numberWithInt:HELP_OVER_CURRENT],
+                                             HELP_TYPE,nil];
+                    [[NSNotificationCenter defaultCenter] postNotificationName:NOTICE_MSG
+                                                                        object:nil
+                                                                      userInfo:infoDic];
                     break;
                 }
                 default:
